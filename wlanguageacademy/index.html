@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+  <title id="site-title">W Language Academy | Profesyonel Dil Eğitimi</title>
+  
+  <!-- Google Fonts: Inter & Poppins (Pro) + Fredoka & Nunito (Kids) -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Nunito:wght@400;600;700;800;900&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN with Forms & Container Queries -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Tailwind Custom Unified Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // Pro Academy Palette
+            brand: {
+              purple: '#4B2A7B',
+              purpleLight: '#673A9F',
+              purpleDark: '#351C59',
+              gold: '#F5A623',
+              orange: '#E8743B',
+              bgLight: '#F6F2FB',
+              dark: '#1E1B2E',
+              graySub: '#5D5A6F'
+            },
+            // Kids Academy Palette
+            brandBlue: '#1F4FE0',
+            brandYellow: '#FFC61A',
+            brandPink: '#FF3FA4',
+            brandOrange: '#FF8A1F',
+            brandGreen: '#3CC84B',
+            brandPurple: '#8E3FE0',
+            brandSky: '#F0F7FF',
+            brandDark: '#1E293B',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Poppins', 'sans-serif'],
+            fredoka: ['Fredoka', 'sans-serif'],
+            nunito: ['Nunito', 'sans-serif'],
+          },
+          boxShadow: {
+            'soft': '0 10px 30px -5px rgba(75, 42, 123, 0.08)',
+            'glow': '0 12px 28px -6px rgba(232, 116, 59, 0.35)',
+            'card': '0 4px 20px -2px rgba(30, 27, 46, 0.06)',
+            'btn-yellow': '0 6px 0 #DDA205',
+            'btn-pink': '0 6px 0 #D41D7E',
+            'btn-blue': '0 6px 0 #1339A8',
+            'btn-orange': '0 6px 0 #D96904',
+            'btn-green': '0 6px 0 #289F34',
+            'btn-purple': '0 6px 0 #6C24B8',
+            'chunky': '0 10px 0 rgba(0,0,0,0.06)',
+          },
+          borderRadius: {
+            '2xl': '16px',
+            '3xl': '24px',
+            '4xl': '2rem',
+            '5xl': '2.5rem',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* iOS Rubber-banding & Smooth transitions */
+    body {
+      -webkit-tap-highlight-color: transparent;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Pro Theme Utilities */
+    .gradient-brand {
+      background: linear-gradient(135deg, #4B2A7B 0%, #7B3FA2 50%, #E8743B 100%);
+    }
+    .gradient-orange-gold {
+      background: linear-gradient(135deg, #F5A623 0%, #E8743B 100%);
+    }
+    .text-gradient {
+      background: linear-gradient(135deg, #4B2A7B 20%, #E8743B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Kids Animations & Styling */
+    @keyframes floatSoft {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(1.5deg); }
+    }
+    @keyframes pulseWiggle {
+      0%, 100% { transform: scale(1) rotate(0deg); }
+      50% { transform: scale(1.04) rotate(-2deg); }
+    }
+    .animate-float-soft {
+      animation: floatSoft 4s ease-in-out infinite;
+    }
+    .animate-wiggle {
+      animation: pulseWiggle 3s ease-in-out infinite;
+    }
+    .pattern-dots {
+      background-image: radial-gradient(#d3e4fe 1.5px, transparent 1.5px);
+      background-size: 18px 18px;
+    }
+    .btn-3d {
+      transition: all 0.15s ease-in-out;
+    }
+    .btn-3d:active {
+      transform: translateY(4px);
+      box-shadow: 0 2px 0 rgba(0,0,0,0.2) !important;
+    }
+    .border-chunky-blue { border: 3.5px solid #1F4FE0; }
+    .border-chunky-yellow { border: 3.5px solid #FFC61A; }
+    .border-chunky-pink { border: 3.5px solid #FF3FA4; }
+    .border-chunky-orange { border: 3.5px solid #FF8A1F; }
+    .border-chunky-green { border: 3.5px solid #3CC84B; }
+    .border-chunky-purple { border: 3.5px solid #8E3FE0; }
+
+    /* Mode switching transitions */
+    .view-container {
+      transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .view-hidden {
+      display: none !important;
+      opacity: 0;
+    }
+    .view-active {
+      display: block;
+      opacity: 1;
+      animation: fadeIn 0.35s ease forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body id="main-body" class="bg-brand-bgLight text-brand-dark font-sans antialiased overflow-x-hidden selection:bg-brand-gold selection:text-white">
+
+  <!-- ========================================================================= -->
+  <!-- 1. PROFESYONEL MOD GÖRÜNÜMÜ (PRO / ADULT MODE) -->
+  <!-- ========================================================================= -->
+  <div id="view-pro" class="view-container view-active">
+    
+    <!-- Pro Sticky Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-brand-purple/10 px-4 py-3 transition-all duration-300">
+      <div class="max-w-md mx-auto flex items-center justify-between">
+        <!-- Brand Logo -->
+        <a aria-label="W Language Academy Ana Sayfa" class="flex items-center gap-2" href="#">
+          <img alt="W Language Academy" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGYLCpmjB4s-02mhMVB9vk95kIY2qfUW_XG-oQmLExY39chmT9Wp-RwXhMDIwwbwjsjO2Z-4yr_XjJJnQD8n_r-1nTrJDGVYfrkpKvi7FbVHRmfslYm1JK9RrfeCnxG-jy_1MtXOQFV5Nbq5EOoT7ENGOhc6_GAJz3gMux3bQMfaMpAQM_IQ56DbwJgdtYIewD2QmTQ6hNfTt__f8QAQiTEXqsUHgu60y6P2y2KjXaA8GXdhVB10yMepLDUxXdU1k-dsU" />
+        </a>
+        <!-- Right Navigation Actions -->
+        <div class="flex items-center gap-2">
+          <!-- Kids Mode Switcher Button -->
+          <button type="button" aria-label="Çocuk Moduna Geç" onclick="switchThemeMode('kids')" class="relative group inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold bg-gradient-to-r from-amber-50 to-orange-50 border border-brand-gold/50 text-brand-orange shadow-sm hover:border-brand-orange active:scale-95 transition-all cursor-pointer">
+            <span class="animate-bounce">🐱</span>
+            <span class="font-heading">For Kids</span>
+            <span class="absolute -top-1 -right-1 flex h-2.5 w-2.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-orange opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-orange"></span>
+            </span>
+          </button>
+          <!-- Quick CTA Button -->
+          <a class="bg-brand-purple text-white text-xs font-semibold px-3.5 py-2 rounded-xl shadow-sm active:scale-95 transition-transform flex items-center" href="#pro-randevu">
+            Randevu Al
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Pro Main Content -->
+    <main class="max-w-md mx-auto px-4 pt-4 pb-12 space-y-12">
+      <!-- Pro Hero -->
+      <section class="pt-3 text-center space-y-4" data-purpose="hero-section">
+        <div class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-brand-purple/15 text-brand-purple text-xs font-medium shadow-sm">
+          <span class="text-brand-gold">✨</span>
+          <span>Butik Eğitim &amp; Güçlü Veli İletişimi</span>
+        </div>
+        <h1 class="font-heading font-extrabold text-2xl sm:text-3xl leading-snug tracking-tight text-brand-dark">
+          Dil öğrenmek disiplin ister, <span class="text-gradient">biz bunu birlikte kuruyoruz.</span>
+        </h1>
+        <p class="text-brand-graySub text-sm leading-relaxed font-normal px-2">
+          İlkokul, ortaokul ve lise öğrencilerimize özel yapılandırılmış sistemimizle; düzenli takip, haftalık veli bilgilendirmesi ve uzman kadromuzla kalıcı yabancı dil becerisi kazandırıyoruz.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+          <a class="w-full sm:w-auto py-3.5 px-6 rounded-2xl text-white font-heading font-semibold text-sm gradient-orange-gold shadow-glow active:scale-98 transition text-center" href="#pro-randevu">
+            Randevu Al
+          </a>
+          <a class="w-full sm:w-auto py-3 px-6 rounded-2xl bg-white text-brand-purple font-heading font-semibold text-sm border border-brand-purple/20 hover:bg-brand-purple/5 transition text-center shadow-card" href="#pro-programlar">
+            Programları Gör
+          </a>
+        </div>
+
+        <!-- Visual Preview Card -->
+        <div class="relative mt-6 rounded-2xl overflow-hidden bg-white shadow-soft border border-purple-100 p-2">
+          <div class="relative rounded-xl overflow-hidden bg-brand-purple/5 aspect-video flex items-center justify-center">
+            <div class="absolute inset-0 bg-gradient-to-tr from-brand-purple/80 via-brand-purple/40 to-transparent"></div>
+            <div class="absolute -top-12 -left-12 w-32 h-32 rounded-full bg-brand-gold/20 blur-xl"></div>
+            <div class="absolute -bottom-10 -right-10 w-32 h-32 rounded-full bg-brand-orange/30 blur-lg"></div>
+            <div class="relative z-10 flex flex-col items-center gap-2">
+              <button aria-label="Tanıtım Videosunu Oynat" class="w-14 h-14 rounded-full gradient-orange-gold text-white flex items-center justify-center shadow-glow active:scale-95 transition-transform">
+                <svg class="w-6 h-6 ml-0.5 fill-current" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </button>
+              <span class="text-white text-xs font-semibold drop-shadow">Akademi Tanıtım Turu</span>
+            </div>
+            <div class="absolute top-2 left-2 bg-brand-dark/70 backdrop-blur-md px-2.5 py-1 rounded-full text-[11px] font-medium text-white flex items-center gap-1 border border-white/20">
+              <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              Yeni Dönem Kayıtları
+            </div>
+            <div class="absolute bottom-2 inset-x-2 bg-white/95 backdrop-blur-sm p-2 rounded-lg text-left flex items-center justify-between border border-white/50">
+              <div>
+                <p class="text-[11px] font-bold text-brand-purple">80 Öğrenci Kontenjanlı</p>
+                <p class="text-[10px] text-gray-500">Butik &amp; Yüksek İlgi Odaklı Akademi</p>
+              </div>
+              <span class="text-brand-orange text-xs font-bold">Doluluk %85</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pro Metrics -->
+      <section class="grid grid-cols-2 gap-3" data-purpose="metrics-grid">
+        <div class="bg-white p-4 rounded-2xl border border-purple-50 shadow-soft text-center">
+          <p class="font-heading font-extrabold text-2xl text-brand-purple">80+</p>
+          <p class="text-xs text-brand-graySub mt-0.5 font-medium">Butik Kontenjan / Aktif Öğrenci</p>
+        </div>
+        <div class="bg-white p-4 rounded-2xl border border-purple-50 shadow-soft text-center">
+          <p class="font-heading font-extrabold text-2xl text-brand-orange">12+</p>
+          <p class="text-xs text-brand-graySub mt-0.5 font-medium">Yıllık Uzman Eğitmen Deneyimi</p>
+        </div>
+        <div class="bg-white p-4 rounded-2xl border border-purple-50 shadow-soft text-center">
+          <p class="font-heading font-extrabold text-2xl text-brand-purple">3</p>
+          <p class="text-xs text-brand-graySub mt-0.5 font-medium">Temel Kademe (İlkokul, Orta, Lise)</p>
+        </div>
+        <div class="bg-white p-4 rounded-2xl border border-purple-50 shadow-soft text-center">
+          <p class="font-heading font-extrabold text-2xl text-brand-gold">%98</p>
+          <p class="text-xs text-brand-graySub mt-0.5 font-medium">Veli Memnuniyeti &amp; Takip</p>
+        </div>
+      </section>
+
+      <!-- Pro Programs -->
+      <section class="space-y-4" data-purpose="academic-programs" id="pro-programlar">
+        <div class="text-center space-y-1">
+          <h2 class="font-heading font-bold text-xl text-brand-dark">Akademik Programlarımız</h2>
+          <p class="text-xs text-brand-graySub">Her yaş grubunun bilişsel gelişimine göre özelleştirilmiş sınıflar</p>
+        </div>
+        <div class="space-y-3.5">
+          <!-- Card 1 -->
+          <div class="bg-white p-4 rounded-2xl border border-purple-100 shadow-card flex gap-3.5 items-start">
+            <div class="w-12 h-12 rounded-xl bg-purple-50 border border-brand-purple/15 flex items-center justify-center shrink-0 text-xl">
+              🎨
+            </div>
+            <div class="space-y-1">
+              <div class="flex items-center justify-between">
+                <h3 class="font-heading font-semibold text-sm text-brand-dark">İlkokul Programı</h3>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-purple-100 text-brand-purple">7-10 Yaş</span>
+              </div>
+              <p class="text-xs text-brand-graySub leading-relaxed">
+                Temel dil sevgisi, eğlenceli ve interaktif başlangıç. Oyunlaştırılmış sağlam fonetik ve kelime temelleri.
+              </p>
+              <div class="flex gap-1.5 pt-1 text-[11px] text-brand-purple font-medium">
+                <span>• Ses Bilgisi</span>
+                <span>• Şarkılar &amp; Diyalog</span>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="bg-white p-4 rounded-2xl border border-orange-100 shadow-card flex gap-3.5 items-start">
+            <div class="w-12 h-12 rounded-xl bg-orange-50 border border-brand-orange/20 flex items-center justify-center shrink-0 text-xl">
+              📚
+            </div>
+            <div class="space-y-1">
+              <div class="flex items-center justify-between">
+                <h3 class="font-heading font-semibold text-sm text-brand-dark">Ortaokul Programı</h3>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-orange-100 text-brand-orange">11-14 Yaş</span>
+              </div>
+              <p class="text-xs text-brand-graySub leading-relaxed">
+                Akademik dil kazanımı, okul müfredatına tam uyumlu destek, aktif konuşma ve pratik kelime hakimiyeti.
+              </p>
+              <div class="flex gap-1.5 pt-1 text-[11px] text-brand-orange font-medium">
+                <span>• Dilbilgisi Temeli</span>
+                <span>• Akıcı Konuşma</span>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="bg-white p-4 rounded-2xl border border-amber-100 shadow-card flex gap-3.5 items-start">
+            <div class="w-12 h-12 rounded-xl bg-amber-50 border border-brand-gold/30 flex items-center justify-center shrink-0 text-xl">
+              🎓
+            </div>
+            <div class="space-y-1">
+              <div class="flex items-center justify-between">
+                <h3 class="font-heading font-semibold text-sm text-brand-dark">Lise Programı</h3>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-brand-gold">15-18 Yaş</span>
+              </div>
+              <p class="text-xs text-brand-graySub leading-relaxed">
+                İleri seviye akıcılık, uluslararası sertifikasyon hazırlıkları (IELTS/TOEFL) ve münazara/sunum becerileri.
+              </p>
+              <div class="flex gap-1.5 pt-1 text-[11px] text-amber-700 font-medium">
+                <span>• Sınav Hazırlık</span>
+                <span>• Global Akıcılık</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pro Methodology -->
+      <section class="space-y-4" data-purpose="teaching-methodology">
+        <div class="text-center space-y-1">
+          <h2 class="font-heading font-bold text-xl text-brand-dark">Başarı Getiren Yöntemimiz</h2>
+          <p class="text-xs text-brand-graySub">Disiplin ve yakın ilgi ile kalıcı öğrenme modeli</p>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div class="bg-white p-3.5 rounded-2xl border border-purple-50 shadow-soft space-y-1.5">
+            <div class="w-8 h-8 rounded-lg bg-purple-100/70 text-brand-purple flex items-center justify-center font-bold text-sm">
+              📝
+            </div>
+            <h4 class="font-heading font-semibold text-xs text-brand-dark leading-snug">Ödev Atama &amp; Takibi</h4>
+            <p class="text-[11px] text-brand-graySub leading-relaxed">Düzenli ve hedefe yönelik günlük/haftalık pekiştirme alıştırmaları.</p>
+          </div>
+          <div class="bg-white p-3.5 rounded-2xl border border-purple-50 shadow-soft space-y-1.5">
+            <div class="w-8 h-8 rounded-lg bg-orange-100/70 text-brand-orange flex items-center justify-center font-bold text-sm">
+              🎯
+            </div>
+            <h4 class="font-heading font-semibold text-xs text-brand-dark leading-snug">Birebir Öğrenci Kontrolü</h4>
+            <p class="text-[11px] text-brand-graySub leading-relaxed">Her öğrencinin gelişim eğrisi mentörler eşliğinde adım adım analiz edilir.</p>
+          </div>
+          <div class="bg-white p-3.5 rounded-2xl border border-purple-50 shadow-soft space-y-1.5">
+            <div class="w-8 h-8 rounded-lg bg-amber-100/70 text-brand-gold flex items-center justify-center font-bold text-sm">
+              📊
+            </div>
+            <h4 class="font-heading font-semibold text-xs text-brand-dark leading-snug">Haftalık Veli Bilgilendirme</h4>
+            <p class="text-[11px] text-brand-graySub leading-relaxed">Detaylı dijital raporlama ve düzenli geri bildirim seansları.</p>
+          </div>
+          <div class="bg-white p-3.5 rounded-2xl border border-purple-50 shadow-soft space-y-1.5">
+            <div class="w-8 h-8 rounded-lg bg-pink-100/70 text-pink-600 flex items-center justify-center font-bold text-sm">
+              🎙️
+            </div>
+            <h4 class="font-heading font-semibold text-xs text-brand-dark leading-snug">Sesletim (Telaffuz)</h4>
+            <p class="text-[11px] text-brand-graySub leading-relaxed">Fonetik laboratuvarı ve birebir telaffuz pratikleriyle doğru aksan.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pro Online Platform -->
+      <section class="rounded-3xl p-5 gradient-brand text-white relative overflow-hidden shadow-soft" data-purpose="online-academy-banner">
+        <div class="relative z-10 space-y-3">
+          <span class="inline-block bg-white/20 text-white backdrop-blur-md px-2.5 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider">
+            Dijital Öğrenme Alanı
+          </span>
+          <h3 class="font-heading font-bold text-lg text-white leading-tight">
+            W-Online Paketleri ile Sınırsız Pratik İmkanı
+          </h3>
+          <p class="text-xs text-purple-100 leading-relaxed">
+            İnteraktif dijital sınıflar, esnek çalışma saatleri ve yapay zeka destekli konuşma odaları cebinizde.
+          </p>
+          <div class="pt-2 flex items-center gap-3">
+            <a class="bg-white text-brand-purple font-heading font-semibold text-xs px-4 py-2.5 rounded-xl shadow-md active:scale-95 transition" href="#pro-randevu">
+              Paketleri İncele
+            </a>
+            <div class="flex items-center gap-1.5 text-xs text-amber-200">
+              <span class="text-sm">★</span>
+              <span class="text-[11px] font-medium">Birebir Canlı Dersler</span>
+            </div>
+          </div>
+        </div>
+        <div class="absolute -right-8 -bottom-8 w-44 h-44 rounded-full bg-brand-orange/20 blur-2xl"></div>
+      </section>
+
+      <!-- Pro Study Abroad -->
+      <section class="bg-white rounded-2xl p-4 border border-purple-100 shadow-card flex items-center gap-4" data-purpose="study-abroad-consultancy">
+        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 flex items-center justify-center text-2xl shrink-0">
+          ✈️
+        </div>
+        <div class="space-y-1">
+          <span class="text-[10px] font-bold text-brand-orange uppercase tracking-wide">Yurtdışı Eğitim &amp; Danışmanlık</span>
+          <h4 class="font-heading font-semibold text-sm text-brand-dark">Dünya Kapılarını Açın</h4>
+          <p class="text-xs text-brand-graySub leading-relaxed">
+            İngiltere, Amerika ve Avrupa'da dil okulları, prestijli yaz kampları ve lise değişim programı danışmanlığı.
+          </p>
+        </div>
+      </section>
+
+      <!-- Pro Pronunciation Youtube Videos -->
+      <section class="space-y-3.5" data-purpose="youtube-showcase">
+        <div class="flex items-center justify-between">
+          <div>
+            <h2 class="font-heading font-bold text-lg text-brand-dark">Sesletim Videoları</h2>
+            <p class="text-xs text-brand-graySub">YouTube kanalımızdan öne çıkan mini dersler</p>
+          </div>
+          <a class="text-xs font-semibold text-red-600 hover:text-red-700 flex items-center gap-1" href="https://youtube.com" rel="noopener noreferrer" target="_blank">
+            <span>Kanalımız</span>
+            <span>→</span>
+          </a>
+        </div>
+        <div class="space-y-3">
+          <div class="bg-white rounded-2xl p-3 border border-purple-50 shadow-soft flex gap-3 items-center">
+            <div class="relative w-24 h-16 rounded-xl bg-brand-purple/10 shrink-0 overflow-hidden flex items-center justify-center">
+              <span class="text-xs font-bold text-brand-purple">VIDEO 1</span>
+              <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                <div class="w-6 h-6 rounded-full bg-red-600 text-white flex items-center justify-center shadow text-[10px]">▶</div>
+              </div>
+            </div>
+            <div class="space-y-1">
+              <h5 class="text-xs font-heading font-semibold text-brand-dark line-clamp-1">İngilizce "TH" Sesini Kusursuz Çıkarma</h5>
+              <p class="text-[11px] text-brand-graySub">Dil pozisyonu ve pratik alıştırmalar</p>
+              <span class="text-[10px] text-brand-orange font-medium">3:45 dk • Fonetik Serisi</span>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl p-3 border border-purple-50 shadow-soft flex gap-3 items-center">
+            <div class="relative w-24 h-16 rounded-xl bg-orange-500/10 shrink-0 overflow-hidden flex items-center justify-center">
+              <span class="text-xs font-bold text-brand-orange">VIDEO 2</span>
+              <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                <div class="w-6 h-6 rounded-full bg-red-600 text-white flex items-center justify-center shadow text-[10px]">▶</div>
+              </div>
+            </div>
+            <div class="space-y-1">
+              <h5 class="text-xs font-heading font-semibold text-brand-dark line-clamp-1">En Çok Yanlış Söylenen 15 Kelime</h5>
+              <p class="text-[11px] text-brand-graySub">Native telaffuz karşılaştırmaları</p>
+              <span class="text-[10px] text-brand-orange font-medium">5:12 dk • Pratik Bilgiler</span>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl p-3 border border-purple-50 shadow-soft flex gap-3 items-center">
+            <div class="relative w-24 h-16 rounded-xl bg-amber-500/10 shrink-0 overflow-hidden flex items-center justify-center">
+              <span class="text-xs font-bold text-brand-gold">VIDEO 3</span>
+              <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                <div class="w-6 h-6 rounded-full bg-red-600 text-white flex items-center justify-center shadow text-[10px]">▶</div>
+              </div>
+            </div>
+            <div class="space-y-1">
+              <h5 class="text-xs font-heading font-semibold text-brand-dark line-clamp-1">Akıcı Konuşma İçin Bağlama (Linking)</h5>
+              <p class="text-[11px] text-brand-graySub">Kelimeleri birbirine bağlama teknikleri</p>
+              <span class="text-[10px] text-brand-orange font-medium">4:20 dk • İleri Seviye</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pro Vision & Mission -->
+      <section class="grid grid-cols-1 gap-3" data-purpose="vision-and-mission">
+        <div class="bg-white p-4 rounded-2xl border-l-4 border-l-brand-purple border border-purple-50 shadow-card space-y-1">
+          <h4 class="font-heading font-bold text-sm text-brand-purple flex items-center gap-1.5">
+            <span>🎯</span> Misyonumuz
+          </h4>
+          <p class="text-xs text-brand-graySub leading-relaxed">
+            Ezberci kalıplardan uzak, yaşayan ve hayatın içine entegre olan bir yabancı dil kültürü oluşturmak; her öğrencimizin konuşma bariyerini güvenle aşmasını sağlamak.
+          </p>
+        </div>
+        <div class="bg-white p-4 rounded-2xl border-l-4 border-l-brand-orange border border-purple-50 shadow-card space-y-1">
+          <h4 class="font-heading font-bold text-sm text-brand-orange flex items-center gap-1.5">
+            <span>🌍</span> Vizyonumuz
+          </h4>
+          <p class="text-xs text-brand-graySub leading-relaxed">
+            Globalleşen dünyada kendini ana dili rahatlığında ifade edebilen, eleştirel düşünen ve akademik platformlarda fark yaratan lider bireyler yetiştirmek.
+          </p>
+        </div>
+      </section>
+
+      <!-- Pro Appointment Form -->
+      <section class="bg-white rounded-3xl p-5 border border-purple-100 shadow-soft space-y-4" data-purpose="booking-contact-form" id="pro-randevu">
+        <div class="text-center space-y-1">
+          <span class="text-[11px] font-semibold text-brand-orange uppercase tracking-wider">Hızlı Tanışma &amp; Seviye Tespiti</span>
+          <h3 class="font-heading font-bold text-xl text-brand-dark">Randevu Formu</h3>
+          <p class="text-xs text-brand-graySub">Eğitim danışmanlarımız sizi aynı gün içinde arasın.</p>
+        </div>
+        <form class="space-y-3.5 text-left" onsubmit="handleProFormSubmit(event)">
+          <div>
+            <label class="block text-xs font-semibold text-brand-dark mb-1" for="pro_full_name">Veli Adı Soyadı</label>
+            <input class="w-full text-xs rounded-xl border-gray-200 focus:border-brand-purple focus:ring-brand-purple py-2.5 px-3" id="pro_full_name" placeholder="Örn: Ahmet Yılmaz" required type="text" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-brand-dark mb-1" for="pro_phone">Telefon Numarası</label>
+            <input class="w-full text-xs rounded-xl border-gray-200 focus:border-brand-purple focus:ring-brand-purple py-2.5 px-3" id="pro_phone" placeholder="05XX XXX XX XX" required type="tel" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-brand-dark mb-1" for="pro_grade">Öğrenci Kademe / Sınıf</label>
+            <select class="w-full text-xs rounded-xl border-gray-200 focus:border-brand-purple focus:ring-brand-purple py-2.5 px-3 bg-white" id="pro_grade">
+              <option value="ilkokul">İlkokul (1, 2, 3 veya 4. Sınıf)</option>
+              <option value="ortaokul">Ortaokul (5, 6, 7 veya 8. Sınıf)</option>
+              <option value="lise">Lise (9, 10, 11 veya 12. Sınıf)</option>
+              <option value="yetiskin">Genel / Yetişkin &amp; Hazırlık</option>
+            </select>
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-xs font-semibold text-brand-dark mb-1" for="pro_lang">Hedef Dil</label>
+              <select class="w-full text-xs rounded-xl border-gray-200 focus:border-brand-purple focus:ring-brand-purple py-2.5 px-3 bg-white" id="pro_lang">
+                <option value="ingilizce">İngilizce</option>
+                <option value="almanca">Almanca</option>
+                <option value="fransizca">Fransızca</option>
+                <option value="diger">Diğer</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-brand-dark mb-1" for="pro_time">Görüşme Saati</label>
+              <select class="w-full text-xs rounded-xl border-gray-200 focus:border-brand-purple focus:ring-brand-purple py-2.5 px-3 bg-white" id="pro_time">
+                <option value="sabah">Sabah (10:00 - 13:00)</option>
+                <option value="ogleden-sonra">Öğle (13:00 - 17:00)</option>
+                <option value="aksam">Akşam (17:00 - 20:00)</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-brand-dark mb-1" for="pro_notes">Eklemek İstedikleriniz (İsteğe bağlı)</label>
+            <textarea class="w-full text-xs rounded-xl border-gray-200 focus:border-brand-purple focus:ring-brand-purple py-2 px-3" id="pro_notes" placeholder="Öğrencinin geçmiş dil deneyimi veya hedefleri..." rows="2"></textarea>
+          </div>
+          <div class="flex items-start gap-2 pt-1">
+            <input class="rounded text-brand-purple focus:ring-brand-purple mt-0.5 h-4 w-4" id="pro_kvkk" required type="checkbox" />
+            <label class="text-[11px] text-gray-500 leading-snug" for="pro_kvkk">
+              <a class="text-brand-purple underline" href="#">KVKK Aydınlatma Metni</a>'ni okudum, iletişim verilerimin işlenmesini kabul ediyorum.
+            </label>
+          </div>
+          <button class="w-full py-3.5 px-4 rounded-xl text-white font-heading font-semibold text-sm gradient-orange-gold shadow-glow active:scale-98 transition flex items-center justify-center gap-2 cursor-pointer" type="submit">
+            <span>Ücretsiz Seviye Tespiti Randevusu Al</span>
+            <span>→</span>
+          </button>
+        </form>
+        <div class="pt-4 border-t border-gray-100 space-y-2">
+          <div class="flex items-start gap-2 text-xs text-brand-graySub">
+            <span class="text-brand-purple">📍</span>
+            <span>Akademi Şube: Bağdat Caddesi No: 124/3 Kadıköy / İstanbul</span>
+          </div>
+          <div class="flex items-center gap-2 text-xs text-brand-graySub">
+            <span class="text-brand-purple">📞</span>
+            <a class="hover:text-brand-purple font-medium" href="tel:+902160000000">+90 (216) 000 00 00</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Pro Footer -->
+    <footer class="bg-brand-dark text-white pt-10 pb-8 px-4 border-t border-purple-900/40" data-purpose="site-footer">
+      <div class="max-w-md mx-auto space-y-8">
+        <div class="space-y-3">
+          <div class="flex items-center gap-2 bg-white/10 p-2 rounded-xl inline-block">
+            <img alt="W Language Academy Logo" class="h-9 w-auto object-contain brightness-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5NBQKMyDx34qsmo_gku68eViss6fGK6BtnYRdz4sN9sktvvIX1q_ODvsKYRXC-GmF1gYCaxfW1rpm-w1gyXgAq9EOA3-MuYwbyTMc2ws7QFQO-PrY6OuQlSwutg-OaqzmWHltCRssyLG6zbciYGxeemKs7pJvr6aFljuSqVx0LvTQCXjMYk0Yp14kBT53XtSmlF92qgo_wLn5nKxd5gXnIpPNtSBwobRxaDhPI9_58tyTm_cTOzpONPgCRUFHAm4dG6g" />
+          </div>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            W Language Academy, butik kontenjanı ve veli odaklı sistematik takip mekanizmasıyla geleceğe donanımlı, akıcı dil konuşabilen bireyler hazırlar.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-4 text-xs">
+          <div>
+            <p class="font-heading font-semibold text-white mb-2.5">Hızlı Bağlantılar</p>
+            <ul class="space-y-2 text-gray-400">
+              <li><a class="hover:text-brand-gold transition" href="#">Ana Sayfa</a></li>
+              <li><a class="hover:text-brand-gold transition" href="#pro-programlar">Programlar</a></li>
+              <li><a class="hover:text-brand-gold transition" href="#pro-randevu">Randevu Talep Et</a></li>
+              <li>
+                <button type="button" onclick="switchThemeMode('kids')" class="hover:text-brand-gold transition text-left cursor-pointer flex items-center gap-1">
+                  <span>🐱</span> W-Kids Dünyası
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-heading font-semibold text-white mb-2.5">İletişim &amp; Sosyal</p>
+            <ul class="space-y-2 text-gray-400">
+              <li>
+                <a class="hover:text-brand-gold transition flex items-center gap-1.5" href="https://instagram.com" rel="noopener noreferrer" target="_blank">
+                  <span>📸</span> @wlanguageacademy
+                </a>
+              </li>
+              <li>
+                <a class="hover:text-brand-gold transition flex items-center gap-1.5" href="https://youtube.com" rel="noopener noreferrer" target="_blank">
+                  <span>▶️</span> W YouTube TV
+                </a>
+              </li>
+              <li>
+                <a class="hover:text-brand-gold transition flex items-center gap-1.5" href="#">
+                  <span>📄</span> KVKK ve Gizlilik
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="pt-6 border-t border-white/10 text-center space-y-1">
+          <p class="text-[11px] text-gray-500">© 2026 W Language Academy. Tüm hakları saklıdır.</p>
+          <p class="text-[10px] text-gray-600">Dil öğrenmek bir disiplin yolculuğudur.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- 2. FOR KIDS MOD GÖRÜNÜMÜ (KIDS MODE) -->
+  <!-- ========================================================================= -->
+  <div id="view-kids" class="view-container view-hidden">
+    
+    <!-- Kids Sticky Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b-4 border-brandBlue/15 px-3 py-2.5 shadow-sm" data-purpose="sticky-header">
+      <div class="max-w-md mx-auto flex items-center justify-between">
+        <!-- Logo Branding with mascot -->
+        <a aria-label="W Language Academy for Kids Anasayfa" class="flex items-center gap-1.5 focus:outline-none" href="#">
+          <img alt="W Language Academy for Kids" class="h-12 w-auto object-contain drop-shadow-sm transform hover:scale-105 transition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtzHVPhhxZsYEzqP1ciykwick7sBMzPaOLCVhTOZftXpTUIbCFv7a2FQlu6F7Zx8txuI-oBWnO_C7Q-i6fkT_dMlha-sY6dsZ8ozVub-oxdKev9aa87HCdzE5U71ycOeD9VTzPKdN4GAK8QnZXyIqc2eUKvCHzmARUu7JvRWYddO7RPScZZgVsJTsj7OE0VH3yXSHGSK18bUO5fSyakZEQp4MVdHhejribyffuqTWYKzX_fw_qLUH7vCozxNkypqvGzPA" />
+        </a>
+        <!-- Switch to Pro Mode Button -->
+        <div class="flex items-center gap-1.5">
+          <span class="inline-flex items-center text-[10px] font-fredoka font-bold text-brandPink bg-pink-100 px-2 py-0.5 rounded-full border border-brandPink/30 animate-pulse">
+            Keşfet! ✨
+          </span>
+          <button type="button" aria-label="Profesyonel Moda Geç" onclick="switchThemeMode('pro')" class="inline-flex items-center gap-1 bg-white hover:bg-slate-50 text-brandBlue font-fredoka font-semibold text-xs px-3 py-1.5 rounded-full border-2 border-brandBlue shadow-sm transition hover:shadow cursor-pointer active:scale-95">
+            <span>🎓</span>
+            <span>Profesyonel Mod</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Kids Main Content -->
+    <main class="max-w-md mx-auto px-4 pb-12 pt-3 space-y-7">
+      <!-- Kids Hero -->
+      <section class="space-y-4 pt-1" data-purpose="hero-section">
+        <div class="bg-gradient-to-r from-amber-100 via-yellow-50 to-pink-100 border-2 border-dashed border-brandYellow rounded-2xl p-2.5 text-xs text-brandDark font-medium flex items-center gap-2 shadow-xs">
+          <span class="text-xl">👨‍👩‍👧</span>
+          <p class="leading-tight">
+            <strong class="font-bold text-brandBlue">Velilerimize Özel:</strong> Oyunla öğrenen mutlu çocuklar, haftalık video takip ve 8 kişilik butik sınıflar!
+          </p>
+        </div>
+
+        <!-- Mascot Greeting Showcase -->
+        <div class="relative bg-gradient-to-b from-blue-500 via-brandBlue to-indigo-700 rounded-3xl p-5 text-center text-white shadow-xl overflow-hidden border-4 border-white shadow-brandBlue/20">
+          <span class="absolute top-2 left-3 text-2xl select-none animate-bounce" style="animation-duration: 2.5s;">⭐</span>
+          <span class="absolute top-8 right-3 text-2xl select-none animate-bounce" style="animation-duration: 3.2s;">🎈</span>
+          <span class="absolute -bottom-2 left-6 text-3xl opacity-30 select-none">🐾</span>
+          <span class="absolute -top-3 right-12 text-3xl opacity-30 select-none">🐾</span>
+
+          <div class="relative inline-block w-full max-w-[290px] mx-auto animate-float-soft my-1">
+            <img alt="W Language Academy for Kids Sevimli Kedi Maskotu" class="w-full h-auto object-contain drop-shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu24u3bMeWC_L8smpyAEmT_zyXbs-mO6r5MMReBES_tJyRAiHs-4r8rlgJ6u6km3C1ojVO5EO45F7blsV1G0tQrQg6nr2E9kFiR1NkMFWYc9bevmi4iHhoxyvPwd4Fpi_GVdNqtiv31v6EWrWCs33dQwcwHHatkf1dimf6TY1eDqg-wXmjCmnFSn5IJrzodkTK2H-JfVjEK6WHjrHDFKkDzdgNIHS-6cfekL37J0qzeQDkfpOcv6LgAQJSI6Xzvg-Sqxg" />
+          </div>
+
+          <div class="relative z-10 mt-1 space-y-2">
+            <span class="inline-block bg-brandYellow text-slate-900 font-fredoka font-black text-xs uppercase px-3 py-1 rounded-full shadow-sm tracking-wider">
+              🎉 İngilizce Artık Sıkıcı Değil!
+            </span>
+            <h1 class="font-fredoka font-bold text-2xl leading-tight text-white drop-shadow">
+              İngilizce Öğrenmek Artık Çok Eğlenceli bir Macera! 🚀🐱
+            </h1>
+            <p class="text-blue-100 text-xs sm:text-sm font-medium leading-relaxed max-w-xs mx-auto">
+              Sıkıcı ezberler yok! Sevimli dostumuzla şarkılar, oyunlar, tiyatro ve interaktif hikayelerle konuşarak öğreniyoruz.
+            </p>
+          </div>
+
+          <div class="mt-5 flex flex-col gap-2.5">
+            <a class="btn-3d w-full bg-brandYellow hover:bg-yellow-400 text-slate-900 font-fredoka font-black text-base py-3 px-5 rounded-2xl shadow-btn-yellow border-2 border-yellow-300 text-center flex items-center justify-center gap-2 cursor-pointer" href="#kids-kayit">
+              <span>Ücretsiz Deneme Dersi Al!</span>
+              <span class="text-lg">🎁</span>
+            </a>
+            <a class="btn-3d w-full bg-brandPink hover:bg-pink-600 text-white font-fredoka font-bold text-sm py-2.5 px-4 rounded-2xl shadow-btn-pink border-2 border-pink-400 text-center flex items-center justify-center gap-1.5 cursor-pointer" href="#kids-programlar">
+              <span>Oyunlu Programlarımızı İncele</span>
+              <span>🎈</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kids Trust Numbers -->
+      <section class="grid grid-cols-2 gap-3" data-purpose="trust-numbers">
+        <div class="bg-white rounded-3xl p-3.5 border-chunky-yellow shadow-chunky text-center flex flex-col items-center justify-center transform hover:scale-[1.02] transition">
+          <span class="text-3xl mb-1">🌟</span>
+          <span class="font-fredoka font-black text-xl text-brandBlue">80 Öğrenci</span>
+          <span class="text-[11px] font-bold text-slate-600 leading-snug">Butik &amp; Samimi Sınıflar</span>
+        </div>
+        <div class="bg-white rounded-3xl p-3.5 border-chunky-pink shadow-chunky text-center flex flex-col items-center justify-center transform hover:scale-[1.02] transition">
+          <span class="text-3xl mb-1">🏆</span>
+          <span class="font-fredoka font-black text-xl text-brandPink">12+ Yıl</span>
+          <span class="text-[11px] font-bold text-slate-600 leading-snug">Çocuk Dil Pedagojisi</span>
+        </div>
+        <div class="bg-white rounded-3xl p-3.5 border-chunky-orange shadow-chunky text-center flex flex-col items-center justify-center transform hover:scale-[1.02] transition">
+          <span class="text-3xl mb-1">🎨</span>
+          <span class="font-fredoka font-black text-xl text-brandOrange">3 Yaş Grubu</span>
+          <span class="text-[11px] font-bold text-slate-600 leading-snug">Özel Müfredat Seviyesi</span>
+        </div>
+        <div class="bg-white rounded-3xl p-3.5 border-chunky-green shadow-chunky text-center flex flex-col items-center justify-center transform hover:scale-[1.02] transition">
+          <span class="text-3xl mb-1">💖</span>
+          <span class="font-fredoka font-black text-xl text-brandGreen">%100</span>
+          <span class="text-[11px] font-bold text-slate-600 leading-snug">Gülümseyen Minikler</span>
+        </div>
+      </section>
+
+      <!-- Kids Programs -->
+      <section class="space-y-3.5" data-purpose="programs-for-kids" id="kids-programlar">
+        <div class="text-center space-y-1">
+          <span class="font-fredoka text-xs font-bold text-brandBlue uppercase tracking-wider bg-blue-100 px-3 py-0.5 rounded-full inline-block">
+            🎈 Yaşa Özel Sınıflar
+          </span>
+          <h2 class="font-fredoka font-bold text-2xl text-slate-900">Programlarımız</h2>
+          <p class="text-xs text-slate-600">Her yaşın öğrenme stili farklı, heyecanı ortak!</p>
+        </div>
+        <div class="space-y-3">
+          <div class="bg-gradient-to-br from-pink-50 to-white rounded-3xl p-4 border-chunky-pink shadow-chunky relative overflow-hidden">
+            <div class="flex items-start gap-3">
+              <div class="bg-brandPink text-white text-2xl w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 shadow-sm font-fredoka">
+                🌈
+              </div>
+              <div class="space-y-1">
+                <span class="text-[10px] font-extrabold uppercase bg-pink-200 text-pink-800 px-2 py-0.5 rounded-full">
+                  7 - 8 Yaş
+                </span>
+                <h3 class="font-fredoka font-bold text-base text-slate-900">
+                  Minik Kaşifler (İlkokul 1-2. Sınıf)
+                </h3>
+                <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                  Renkli flashcard’lar, sevimli çizgi animasyonlar, fonetik alfabe şarkıları ve ilk kelimelerle doğal aşinalık kazanımı.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gradient-to-br from-amber-50 to-white rounded-3xl p-4 border-chunky-yellow shadow-chunky relative overflow-hidden">
+            <div class="flex items-start gap-3">
+              <div class="bg-brandYellow text-slate-900 text-2xl w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 shadow-sm font-fredoka">
+                🔍
+              </div>
+              <div class="space-y-1">
+                <span class="text-[10px] font-extrabold uppercase bg-yellow-200 text-amber-900 px-2 py-0.5 rounded-full">
+                  9 - 10 Yaş
+                </span>
+                <h3 class="font-fredoka font-bold text-base text-slate-900">
+                  Dil Dedektifleri (İlkokul 3-4. Sınıf)
+                </h3>
+                <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                  Günlük basit diyaloglar, küçük eğlenceli rol canlandırmaları ve topluluk önünde utanmadan İngilizce konuşma özgüveni.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gradient-to-br from-blue-50 to-white rounded-3xl p-4 border-chunky-blue shadow-chunky relative overflow-hidden">
+            <div class="flex items-start gap-3">
+              <div class="bg-brandBlue text-white text-2xl w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 shadow-sm font-fredoka">
+                🚀
+              </div>
+              <div class="space-y-1">
+                <span class="text-[10px] font-extrabold uppercase bg-blue-200 text-blue-900 px-2 py-0.5 rounded-full">
+                  11 - 13 Yaş
+                </span>
+                <h3 class="font-fredoka font-bold text-base text-slate-900">
+                  Genç Kahramanlar (Ortaokul Hazırlık)
+                </h3>
+                <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                  Okul müfredatına ve sınavlarına tam destek, haftalık interaktif speaking kulüpleri ve dijital yarışmalar.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kids Method -->
+      <section class="space-y-3.5" data-purpose="fun-methodology">
+        <div class="text-center space-y-1">
+          <span class="font-fredoka text-xs font-bold text-brandGreen uppercase tracking-wider bg-green-100 px-3 py-0.5 rounded-full inline-block">
+            ✨ Neden Çocuklar Bizi Çok Seviyor?
+          </span>
+          <h2 class="font-fredoka font-bold text-2xl text-slate-900">Eğlenceli Yöntemimiz</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="bg-white rounded-3xl p-4 border-chunky-purple shadow-chunky space-y-2">
+            <div class="w-10 h-10 rounded-xl bg-purple-100 flex items-center justify-center text-xl">🎮</div>
+            <h3 class="font-fredoka font-bold text-sm text-slate-900">Oyun &amp; Görev Takibi</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Puan topla, dijital rozet kazan! Ödevler görev oyununa dönüşür, pratik yapmak eğlenceye dönüşür.</p>
+          </div>
+          <div class="bg-white rounded-3xl p-4 border-chunky-pink shadow-chunky space-y-2">
+            <div class="w-10 h-10 rounded-xl bg-pink-100 flex items-center justify-center text-xl">🐱</div>
+            <h3 class="font-fredoka font-bold text-sm text-slate-900">Birebir İlgi &amp; Şefkat</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Her çocuğun öğrenme ritmi farklıdır. Küçük sınıflarda yargılanmadan, stresten uzak sevgi dolu iletişim.</p>
+          </div>
+          <div class="bg-white rounded-3xl p-4 border-chunky-green shadow-chunky space-y-2">
+            <div class="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center text-xl">📱</div>
+            <h3 class="font-fredoka font-bold text-sm text-slate-900">Veli Bilgilendirme Raporu</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Çocuğunuzun ders içi konuşma kayıtları ve haftalık video özetleri telefonunuza düzenli gelsin.</p>
+          </div>
+          <div class="bg-white rounded-3xl p-4 border-chunky-orange shadow-chunky space-y-2">
+            <div class="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center text-xl">🎙️</div>
+            <h3 class="font-fredoka font-bold text-sm text-slate-900">Sesletim &amp; Doğru Telaffuz</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Native aksanı erken yaşta doğru oturtan ritmik tekerlemeler ve eğlenceli ses taklitleri.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kids Online World -->
+      <section class="bg-gradient-to-r from-brandPurple to-indigo-700 rounded-3xl p-5 text-white shadow-xl relative overflow-hidden border-4 border-white" data-purpose="digital-world">
+        <span class="absolute -right-6 -bottom-6 text-7xl opacity-20 select-none">🎮</span>
+        <div class="relative z-10 space-y-2.5">
+          <span class="bg-brandYellow text-slate-950 font-fredoka font-bold text-[11px] px-2.5 py-0.5 rounded-full inline-block uppercase">
+            💻 W-Online Kids Dünyası
+          </span>
+          <h2 class="font-fredoka font-bold text-xl leading-tight">Evden de Maceraya Katıl!</h2>
+          <p class="text-xs text-purple-100 leading-relaxed font-medium">
+            Türkiye'nin her yerinden canlı interaktif sınıflar, 7/24 erişilebilir eğlenceli animasyonlu kütüphane ve konuşma odaları.
+          </p>
+          <a class="btn-3d inline-flex items-center gap-1.5 bg-brandYellow hover:bg-yellow-400 text-slate-900 font-fredoka font-bold text-xs py-2.5 px-4 rounded-xl shadow-btn-yellow mt-2 cursor-pointer" href="#kids-kayit">
+            <span>Dijital Paketleri Gör</span>
+            <span>🚀</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Kids Summer Camp -->
+      <section class="bg-gradient-to-br from-emerald-50 via-teal-50 to-sky-50 rounded-3xl p-5 border-chunky-green shadow-chunky space-y-3" data-purpose="summer-camp">
+        <div class="flex items-center gap-2">
+          <span class="text-2xl">✈️🌍</span>
+          <div>
+            <span class="text-[10px] font-fredoka font-bold text-emerald-700 uppercase bg-emerald-100 px-2 py-0.5 rounded-full">
+              Yaz Tatili Fırsatı
+            </span>
+            <h2 class="font-fredoka font-bold text-lg text-slate-900">
+              Yurtdışı Çocuk Kampları &amp; Yaz Okulu
+            </h2>
+          </div>
+        </div>
+        <p class="text-xs text-slate-600 leading-relaxed font-medium">
+          İngiltere ve Avrupa'nın en prestijli, güvenli kolej kampüslerinde 24 saat öğretmen eşliğinde; spor, sanat ve %100 İngilizce dolu unutulmaz bir yaz tatili.
+        </p>
+        <div class="flex items-center justify-between pt-1">
+          <span class="text-xs font-extrabold text-brandGreen font-fredoka">7-15 Yaş Grupları İçin</span>
+          <a class="btn-3d text-xs font-fredoka font-bold bg-brandGreen text-white px-3.5 py-1.5 rounded-xl shadow-btn-green cursor-pointer" href="#kids-kayit">
+            Bilgi Al 🎒
+          </a>
+        </div>
+      </section>
+
+      <!-- Kids Video Learning -->
+      <section class="space-y-3" data-purpose="video-learning">
+        <div class="text-center space-y-1">
+          <span class="font-fredoka text-xs font-bold text-red-600 uppercase tracking-wider bg-red-100 px-3 py-0.5 rounded-full inline-block">
+            📺 YouTube Kids Köşesi
+          </span>
+          <h2 class="font-fredoka font-bold text-xl text-slate-900">
+            Çizgi Filmler &amp; Sesletim Videoları
+          </h2>
+          <p class="text-xs text-slate-600">Her hafta yeni ve neşeli mini dersler!</p>
+        </div>
+        <div class="space-y-2.5">
+          <div class="bg-white rounded-2xl p-3 border-2 border-slate-200 flex items-center justify-between shadow-xs hover:border-brandPink transition">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-10 bg-pink-100 rounded-xl flex items-center justify-center text-pink-600 font-bold shrink-0">
+                ▶️
+              </div>
+              <div>
+                <h4 class="font-fredoka font-bold text-xs text-slate-900">Harflerin Gizemli Sesleri 🐱</h4>
+                <p class="text-[11px] text-slate-500">Phonics &amp; Telaffuz • 4 dk</p>
+              </div>
+            </div>
+            <button class="btn-3d bg-pink-50 hover:bg-pink-100 text-brandPink text-xs font-fredoka font-bold px-3 py-1.5 rounded-xl border border-pink-200 cursor-pointer" type="button">
+              İzle
+            </button>
+          </div>
+          <div class="bg-white rounded-2xl p-3 border-2 border-slate-200 flex items-center justify-between shadow-xs hover:border-brandYellow transition">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-10 bg-amber-100 rounded-xl flex items-center justify-center text-amber-600 font-bold shrink-0">
+                ▶️
+              </div>
+              <div>
+                <h4 class="font-fredoka font-bold text-xs text-slate-900">Hayvanları İngilizce Tanıyalım 🦁</h4>
+                <p class="text-[11px] text-slate-500">Kelime Oyunu • 6 dk</p>
+              </div>
+            </div>
+            <button class="btn-3d bg-amber-50 hover:bg-amber-100 text-amber-700 text-xs font-fredoka font-bold px-3 py-1.5 rounded-xl border border-amber-200 cursor-pointer" type="button">
+              İzle
+            </button>
+          </div>
+          <div class="bg-white rounded-2xl p-3 border-2 border-slate-200 flex items-center justify-between shadow-xs hover:border-brandBlue transition">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 font-bold shrink-0">
+                ▶️
+              </div>
+              <div>
+                <h4 class="font-fredoka font-bold text-xs text-slate-900">Günün Eğlenceli Şarkısı 🎵</h4>
+                <p class="text-[11px] text-slate-500">Sing &amp; Dance • 3 dk</p>
+              </div>
+            </div>
+            <button class="btn-3d bg-blue-50 hover:bg-blue-100 text-brandBlue text-xs font-fredoka font-bold px-3 py-1.5 rounded-xl border border-blue-200 cursor-pointer" type="button">
+              İzle
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kids Vision & Mission -->
+      <section class="bg-white rounded-3xl p-5 border-chunky-yellow shadow-chunky space-y-3" data-purpose="vision-mission">
+        <div class="flex items-center gap-2">
+          <span class="text-3xl">🌈</span>
+          <h2 class="font-fredoka font-bold text-lg text-slate-900">Vizyon &amp; Misyonumuz</h2>
+        </div>
+        <div class="bg-yellow-50 rounded-2xl p-3 border border-yellow-200 text-xs text-slate-700 font-medium leading-relaxed">
+          <strong class="font-bold text-amber-800">Hedefimiz:</strong> Çocuklarımızın yabancı dilden korkmadığı, hata yapmaktan çekinmediği ve İngilizceyi doğal hayatın neşeli bir parçası haline getirdiği özgüvenli nesiller yetiştirmektir.
+        </div>
+      </section>
+
+      <!-- Kids Trial Form -->
+      <section class="bg-white rounded-4xl p-5 border-chunky-orange shadow-xl space-y-4" data-purpose="lead-form" id="kids-kayit">
+        <div class="text-center space-y-1">
+          <span class="text-3xl inline-block animate-wiggle">🎁🎈</span>
+          <h2 class="font-fredoka font-bold text-2xl text-slate-900 leading-tight">
+            Ücretsiz Deneme Dersi Randevusu
+          </h2>
+          <p class="text-xs text-slate-600">
+            Çocuğunuz seviyesini oyunla keşfetsin, siz de eğitim ortamımızı yakından görün!
+          </p>
+        </div>
+        <form class="space-y-3" onsubmit="handleKidsFormSubmit(event)">
+          <div>
+            <label class="block text-xs font-fredoka font-bold text-slate-800 mb-1" for="kids_parent_name">
+              Anne / Baba Adı Soyadı ⭐
+            </label>
+            <input class="w-full rounded-2xl border-2 border-slate-200 focus:border-brandOrange focus:ring-brandOrange text-xs py-2.5 px-3" id="kids_parent_name" placeholder="Örn: Ayşe Yılmaz" required type="text" />
+          </div>
+          <div>
+            <label class="block text-xs font-fredoka font-bold text-slate-800 mb-1" for="kids_phone">
+              Telefon Numaranız 📱
+            </label>
+            <input class="w-full rounded-2xl border-2 border-slate-200 focus:border-brandOrange focus:ring-brandOrange text-xs py-2.5 px-3" id="kids_phone" placeholder="05XX XXX XX XX" required type="tel" />
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-xs font-fredoka font-bold text-slate-800 mb-1" for="kids_child_age">
+                Çocuğunuzun Yaşı 🎂
+              </label>
+              <select class="w-full rounded-2xl border-2 border-slate-200 focus:border-brandOrange focus:ring-brandOrange text-xs py-2.5 px-2 bg-white" id="kids_child_age">
+                <option>6 Yaş</option>
+                <option>7 Yaş</option>
+                <option>8 Yaş</option>
+                <option>9 Yaş</option>
+                <option>10 Yaş</option>
+                <option>11-13 Yaş</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-fredoka font-bold text-slate-800 mb-1" for="kids_class_type">
+                Sınıf Düzeyi 🏫
+              </label>
+              <select class="w-full rounded-2xl border-2 border-slate-200 focus:border-brandOrange focus:ring-brandOrange text-xs py-2.5 px-2 bg-white" id="kids_class_type">
+                <option>Anaokulu / 1. Sınıf</option>
+                <option>2. Sınıf</option>
+                <option>3. Sınıf</option>
+                <option>4. Sınıf</option>
+                <option>Ortaokul</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-fredoka font-bold text-slate-800 mb-1" for="kids_time">
+              Görüşme İçin Uygun Zaman Dilimi ⏰
+            </label>
+            <select class="w-full rounded-2xl border-2 border-slate-200 focus:border-brandOrange focus:ring-brandOrange text-xs py-2.5 px-3 bg-white" id="kids_time">
+              <option>Hafta içi Öğleden Önce (10:00 - 12:00)</option>
+              <option>Hafta içi Öğleden Sonra (13:00 - 17:00)</option>
+              <option>Hafta içi Akşam (17:00 - 19:30)</option>
+              <option>Hafta Sonu Cumartesi</option>
+            </select>
+          </div>
+          <div class="flex items-start gap-2 pt-1">
+            <input class="rounded border-slate-300 text-brandOrange focus:ring-brandOrange mt-0.5" id="kids_kvkk" required type="checkbox" />
+            <label class="text-[11px] text-slate-600 leading-tight" for="kids_kvkk">
+              KVKK Aydınlatma Metnini okudum, deneme dersi bilgilendirmesini kabul ediyorum.
+            </label>
+          </div>
+          <button class="btn-3d w-full bg-brandOrange hover:bg-orange-500 text-white font-fredoka font-black text-base py-3 px-4 rounded-2xl shadow-btn-orange border-2 border-orange-300 text-center flex items-center justify-center gap-2 mt-2 cursor-pointer" type="submit">
+            <span>Hemen Ücretsiz Deneme Dersi Ayarla!</span>
+            <span>🎈</span>
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Kids Footer -->
+    <footer class="bg-white border-t-4 border-brandBlue/15 pt-8 pb-10 px-4" data-purpose="page-footer">
+      <div class="max-w-md mx-auto text-center space-y-4">
+        <div class="flex justify-center">
+          <img alt="W Language Academy for Kids" class="h-16 w-auto object-contain drop-shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBryNSIjTU83FjzRlCncD3OeJJchErip_vvQBOFUHsx7dPD-J0EYyq-VLHJMBX-0XoRO3A4hqpqXh9NqJW41b6A5USjvqLxMXQgJPchlagHSy1SNQ6hXxNg799RmKO-S2obChTw4k5u9UjhwJwxiumjIwkADvVUnV3cnRM5nLbtiXmTpZT9hSWdCp-aL4wLBxNaK1n0ooCk6V4XYlFBpoxKVSuzljPo8f2gFzOrbBciahESy1JfMTeOt6DuCFRGyuTrIbA" />
+        </div>
+        <p class="font-fredoka text-brandBlue font-bold text-sm">
+          W Kids ile her gün yeni bir kelime, yeni bir macera! 🌟🐱
+        </p>
+        <div class="flex items-center justify-center gap-3">
+          <a class="w-9 h-9 rounded-full bg-pink-100 text-brandPink flex items-center justify-center text-sm font-bold shadow-sm hover:scale-110 transition" href="#instagram">
+            📸
+          </a>
+          <a class="w-9 h-9 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-sm font-bold shadow-sm hover:scale-110 transition" href="#youtube">
+            ▶️
+          </a>
+          <a class="w-9 h-9 rounded-full bg-green-100 text-brandGreen flex items-center justify-center text-sm font-bold shadow-sm hover:scale-110 transition" href="#whatsapp">
+            💬
+          </a>
+        </div>
+        <div class="text-[11px] text-slate-400 space-y-1">
+          <p>© 2026 W Language Academy for Kids. Tüm hakları saklıdır.</p>
+          <div class="flex justify-center gap-3 text-slate-500 font-medium">
+            <button type="button" onclick="switchThemeMode('pro')" class="hover:underline text-brandBlue font-bold cursor-pointer">
+              🎓 Yetişkin &amp; Pro Modu
+            </button>
+            <span>•</span>
+            <a class="hover:underline" href="#kvkk">KVKK Politikası</a>
+            <span>•</span>
+            <a class="hover:underline" href="#guvenlik">Çocuk Güvenliği</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 3. JAVASCRIPT: THEME & STATE SWITCHER CONTROLLER -->
+  <!-- ========================================================================= -->
+  <script>
+    /**
+     * Theme & Mode Controller
+     * Handles switching between Pro (Adult) and Kids modes,
+     * keeps track of state in localStorage, manages URL hash, and updates page metadata.
+     */
+    const PRO_TITLE = "W Language Academy | Profesyonel Dil Eğitimi";
+    const KIDS_TITLE = "W Language Academy for Kids | Eğlenceli Çocuk İngilizce Eğitimi";
+
+    function switchThemeMode(targetMode, updateHash = true) {
+      const body = document.getElementById('main-body');
+      const viewPro = document.getElementById('view-pro');
+      const viewKids = document.getElementById('view-kids');
+      const titleElem = document.getElementById('site-title');
+
+      if (targetMode === 'kids') {
+        // Activate Kids Mode
+        viewPro.classList.remove('view-active');
+        viewPro.classList.add('view-hidden');
+        
+        viewKids.classList.remove('view-hidden');
+        viewKids.classList.add('view-active');
+
+        // Update Body Classes for Kids
+        body.className = "bg-brandSky font-nunito text-brandDark antialiased overflow-x-hidden pattern-dots selection:bg-brandPink selection:text-white";
+        titleElem.textContent = KIDS_TITLE;
+        document.title = KIDS_TITLE;
+
+        localStorage.setItem('w_mode', 'kids');
+        if (updateHash) {
+          history.replaceState(null, null, '#kids');
+        }
+      } else {
+        // Activate Pro Mode
+        viewKids.classList.remove('view-active');
+        viewKids.classList.add('view-hidden');
+
+        viewPro.classList.remove('view-hidden');
+        viewPro.classList.add('view-active');
+
+        // Update Body Classes for Pro
+        body.className = "bg-brand-bgLight text-brand-dark font-sans antialiased overflow-x-hidden selection:bg-brand-gold selection:text-white";
+        titleElem.textContent = PRO_TITLE;
+        document.title = PRO_TITLE;
+
+        localStorage.setItem('w_mode', 'pro');
+        if (updateHash) {
+          history.replaceState(null, null, '#pro');
+        }
+      }
+
+      // Smooth scroll to top on switch
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Initialize Mode on Page Load based on URL Hash or LocalStorage
+    window.addEventListener('DOMContentLoaded', () => {
+      const hash = window.location.hash.toLowerCase();
+      const savedMode = localStorage.getItem('w_mode');
+
+      if (hash === '#kids' || hash === '#forkids') {
+        switchThemeMode('kids', false);
+      } else if (hash === '#pro' || hash === '#pro-mode') {
+        switchThemeMode('pro', false);
+      } else if (savedMode === 'kids') {
+        switchThemeMode('kids', false);
+      } else {
+        switchThemeMode('pro', false);
+      }
+    });
+
+    // Form submission handlers with interactive feedbacks
+    function handleProFormSubmit(e) {
+      e.preventDefault();
+      alert("Talebiniz başarıyla alındı! Eğitim danışmanlarımız en kısa sürede sizinle iletişime geçecektir.");
+      e.target.reset();
+    }
+
+    function handleKidsFormSubmit(e) {
+      e.preventDefault();
+      alert("Harika! Başvurunuz alındı. Eğitim danışmanımız sizi en kısa sürede arayacak. 🐱🎈");
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
