@@ -1,0 +1,1507 @@
+﻿<!DOCTYPE html><html lang="tr"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="web_standard" name="shell-type">
+<title>Uzm. Psk. Tuba Güngör Aslan | Klinik Psikolog - Bursa Nilüfer</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+    @layer base {
+      html, body { margin:0; padding:0; }
+      body { overscroll-behavior:none; }
+      main > :first-child { margin-top:0!important; }
+      main > :last-child { margin-bottom:0!important; }
+    }
+    ::-webkit-scrollbar { display:none; }
+
+    /* Organik gren / kağıt dokusu (Pure SVG data overlay - minimal & clean) */
+    .paper-texture {
+      background-color: #fbf9f5;
+      background-image: radial-gradient(rgba(43,76,65,0.03) 1px, transparent 0);
+      background-size: 24px 24px;
+    }
+
+    /* Keyframe Animations */
+    @keyframes float-slow {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(1.5deg); }
+    }
+    @keyframes float-reverse {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(8px) rotate(-1.5deg); }
+    }
+    @keyframes gentle-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(43, 76, 65, 0.25); }
+      50% { box-shadow: 0 0 0 10px rgba(43, 76, 65, 0); }
+    }
+    @keyframes icon-wiggle {
+      0%, 80%, 100% { transform: rotate(0deg); }
+      85% { transform: rotate(-12deg); }
+      90% { transform: rotate(10deg); }
+      95% { transform: rotate(-6deg); }
+    }
+    @keyframes marquee-scroll {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .animate-float-1 { animation: float-slow 7s ease-in-out infinite; }
+    .animate-float-2 { animation: float-reverse 8.5s ease-in-out infinite; }
+    .animate-float-3 { animation: float-slow 6s ease-in-out infinite 1s; }
+    .animate-pulse-glow { animation: gentle-pulse 3s infinite ease-in-out; }
+    .animate-wiggle-periodic { animation: icon-wiggle 5s infinite ease-in-out; }
+
+    .marquee-track {
+      display: flex;
+      width: 200%;
+      animation: marquee-scroll 32s linear infinite;
+    }
+    .marquee-container:hover .marquee-track {
+      animation-play-state: paused;
+    }
+
+    /* Handcrafted Washi Tape effect */
+    .washi-tape {
+      background: rgba(254, 162, 124, 0.45);
+      backdrop-filter: blur(2px);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      clip-path: polygon(3% 0%, 97% 2%, 100% 98%, 0% 95%);
+    }
+
+    .font-handwriting {
+      font-family: 'Caveat', cursive, sans-serif;
+    }
+
+    /* Fade-up reveal on scroll */
+    .reveal-item {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-item.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-delay: -1ms !important;
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0s !important;
+        scroll-behavior: auto !important;
+      }
+      .marquee-track {
+        animation: none;
+      }
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "error-container": "#ffdad6",
+            "on-primary-container": "#bbdfd0",
+            "on-primary-fixed": "#002118",
+            "surface-tint": "#446559",
+            "on-secondary-fixed": "#370e00",
+            "on-surface-variant": "#414845",
+            "surface-container": "#efeeea",
+            "on-tertiary-container": "#ffcd9f",
+            "tertiary-container": "#7c552c",
+            "surface-dim": "#dbdad6",
+            "inverse-on-surface": "#f2f0ed",
+            "surface-container-highest": "#e4e2de",
+            "tertiary": "#613e17",
+            "secondary-container": "#fea27c",
+            "surface-container-high": "#eae8e4",
+            "outline-variant": "#c1c8c3",
+            "on-tertiary-fixed": "#2c1600",
+            "on-tertiary-fixed-variant": "#623f18",
+            "tertiary-fixed": "#ffdcbd",
+            "on-secondary-container": "#773619",
+            "surface-container-low": "#f5f3ef",
+            "surface": "#fbf9f5",
+            "inverse-primary": "#aacec0",
+            "on-primary": "#ffffff",
+            "inverse-surface": "#30312e",
+            "secondary-fixed": "#ffdbce",
+            "outline": "#717975",
+            "on-secondary-fixed-variant": "#743417",
+            "on-error": "#ffffff",
+            "on-background": "#1b1c1a",
+            "on-error-container": "#93000a",
+            "primary": "#2b4c41",
+            "on-primary-fixed-variant": "#2c4d42",
+            "on-tertiary": "#ffffff",
+            "primary-container": "#436458",
+            "surface-container-lowest": "#ffffff",
+            "surface-variant": "#e4e2de",
+            "background": "#fbf9f5",
+            "error": "#ba1a1a",
+            "on-secondary": "#ffffff",
+            "secondary-fixed-dim": "#ffb598",
+            "on-surface": "#1b1c1a",
+            "primary-fixed": "#c6ebdb",
+            "surface-bright": "#fbf9f5",
+            "secondary": "#924b2c",
+            "primary-fixed-dim": "#aacec0",
+            "tertiary-fixed-dim": "#f0bd8b"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1.25rem",
+            "3xl": "1.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "1.25rem",
+            "space-sm": "0.75rem",
+            "space-xl": "3.5rem",
+            "gutter-mobile": "1rem",
+            "margin": "3rem",
+            "space-xs": "0.375rem",
+            "margin-mobile": "1.25rem",
+            "space-lg": "2rem",
+            "gutter": "1.5rem"
+          },
+          "fontFamily": {
+            "handwriting": ["Caveat", "cursive"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Playfair Display"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Playfair Display"],
+            "display-lg": ["Playfair Display"],
+            "display-lg-mobile": ["Playfair Display"],
+            "headline-sm": ["Playfair Display"]
+          },
+          "fontSize": {
+            "label-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "700"}],
+            "label-lg": ["15px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+            "headline-lg-mobile": ["30px", {"lineHeight": "40px", "fontWeight": "600"}],
+            "body-lg": ["18px", {"lineHeight": "30px", "fontWeight": "400"}],
+            "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+            "label-md": ["13px", {"lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+            "headline-lg": ["40px", {"lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "body-sm": ["14px", {"lineHeight": "22px", "fontWeight": "400"}],
+            "headline-md": ["28px", {"lineHeight": "38px", "fontWeight": "500"}],
+            "display-lg": ["56px", {"lineHeight": "68px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+            "display-lg-mobile": ["38px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "headline-sm": ["22px", {"lineHeight": "30px", "fontWeight": "500"}]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="paper-texture font-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-secondary relative overflow-x-hidden">
+<!-- HEADER -->
+<!-- HEADER -->
+<header class="fixed top-0 left-0 right-0 w-full z-50 bg-[#fbf9f5]/90 backdrop-blur-xl border-b border-[#2b4c41]/5 shadow-[0_4px_25px_rgba(43,76,65,0.05)] transition-all">
+<div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4">
+  <div class="flex items-center gap-3">
+    <a class="flex items-center gap-3 group" href="index.html">
+      <img alt="Uzm. Psk. Tuba GÃ¼ngÃ¶r Aslan Logo" class="h-8 w-auto object-contain transition-transform group-hover:rotate-[-2deg]" src="https://lh3.googleusercontent.com/aida/AEtjO1W_HITE7k8lXkDVAoFvhdly9NdykpswmiAAhX8jB7vLGJmwDT7Fqj3zmnZmC-h-pnkq8c2CuQtYzBl9ELh6QNFVZxTz5WtQS0HzZe2JLvbHuoTuV-EVFl83M2Oe8_eOzsEsdulNnpiocohvhTDrYZsEf7HaoVLluZXJXb0wHbKTHWGibY7VRqY8Ds2BPKuFcJvTuoz7fEAN1uGvUySM7gKFkbLknPYDJyVMX0MFHDst">
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm text-primary tracking-tight group-hover:text-primary-container transition-colors">Tuba GÃ¼ngÃ¶r Aslan</span>
+        <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider flex items-center gap-1.5">
+          <span>Uzman Klinik Psikolog</span>
+          <span class="text-secondary font-handwriting text-sm font-bold lowercase">Â· bursa</span>
+        </span>
+      </div>
+    </a>
+  </div>
+
+  <!-- Desktop Navigation -->
+  <nav class="hidden lg:flex items-center gap-8">
+    <a href="index.html" class="transition-colors py-1 text-primary font-semibold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary after:rounded-full">Ana Sayfa</a>
+    <a href="hakkimda.html" class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors py-1">HakkÄ±mda</a>
+    <a href="calisma-alanlari.html" class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors py-1">Ã‡alÄ±ÅŸma AlanlarÄ±</a>
+    <a href="#blog" class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors py-1">Blog</a>
+    <a href="iletisim.html" class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors py-1">Ä°letiÅŸim</a>
+  </nav>
+
+  <!-- Actions -->
+  <div class="flex items-center gap-3 lg:gap-4">
+    <a aria-label="HÄ±zlÄ± Telefon AramasÄ±" class="hidden sm:inline-flex items-center justify-center w-10 h-10 rounded-full bg-surface-container text-primary hover:bg-primary hover:text-on-primary transition-all shadow-[0_2px_8px_rgba(67,100,88,0.08)] hover:scale-105" href="tel:+905550000000">
+      <span class="material-symbols-outlined text-xl">call</span>
+    </a>
+    <a class="animate-pulse-glow inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-md hover:shadow-lg transition-all duration-200 active:scale-[0.98]" href="#hizli-randevu">
+      <span>Randevu Al</span>
+      <span class="material-symbols-outlined text-sm">calendar_today</span>
+    </a>
+    <!-- Mobile Hamburger Toggle -->
+    <button onclick="toggleMobileNav()" aria-label="MenÃ¼yÃ¼ AÃ§" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-full bg-surface-container text-primary hover:bg-primary hover:text-on-primary transition-all">
+      <span class="material-symbols-outlined text-2xl" id="menu-icon">menu</span>
+    </button>
+  </div>
+</div>
+
+<!-- Mobile Dropdown Navigation Menu -->
+<div id="mobile-dropdown" class="hidden lg:hidden border-t border-primary/10 bg-[#fbf9f5]/98 backdrop-blur-xl px-6 py-5 shadow-xl flex flex-col gap-2 transition-all duration-300">
+  <a class="py-2.5 px-3 rounded-xl bg-primary/10 text-primary font-bold transition-colors" href="index.html">Ana Sayfa</a>
+  <a class="py-2.5 px-3 rounded-xl text-on-surface-variant hover:text-primary hover:bg-surface-container font-medium transition-colors" href="hakkimda.html">HakkÄ±mda</a>
+  <a class="py-2.5 px-3 rounded-xl text-on-surface-variant hover:text-primary hover:bg-surface-container font-medium transition-colors" href="calisma-alanlari.html">Ã‡alÄ±ÅŸma AlanlarÄ±</a>
+  <a class="py-2.5 px-3 rounded-xl text-on-surface-variant hover:text-primary hover:bg-surface-container font-medium transition-colors" href="#blog" onclick="toggleMobileNav()">Blog &amp; YazÄ±lar</a>
+  <a class="py-2.5 px-3 rounded-xl text-on-surface-variant hover:text-primary hover:bg-surface-container font-medium transition-colors" href="iletisim.html">Ä°letiÅŸim</a>
+  <div class="pt-3 mt-1 border-t border-primary/10 flex flex-col gap-2">
+    <a class="text-center py-3 rounded-full bg-primary text-on-primary font-semibold shadow-md" href="#hizli-randevu" onclick="toggleMobileNav()">Randevu Al</a>
+    <a class="text-center py-2.5 rounded-full bg-surface-container text-primary font-medium flex items-center justify-center gap-2" href="tel:+905550000000">
+      <span class="material-symbols-outlined text-sm">call</span>
+      <span>Hemen Ara: 0 (555) 000 00 00</span>
+    </a>
+  </div>
+</div>
+</header>
+<!-- MAIN WRAPPER -->
+<main class="w-full pt-20 pb-24 md:pb-0 overflow-hidden">
+<div class="flex flex-col w-full">
+<!-- SECTION 1: HERO (Warm, Handcrafted, Organic Blobs & Handwritten Doodles) -->
+<section class="relative w-full overflow-hidden py-14 md:py-24 lg:py-28">
+<!-- Floating organic blobs background -->
+<div class="absolute -top-16 -left-20 w-96 h-96 rounded-full bg-primary-fixed/35 blur-3xl pointer-events-none animate-float-1"></div>
+<div class="absolute top-1/3 -right-28 w-88 h-88 rounded-full bg-secondary-fixed/30 blur-3xl pointer-events-none animate-float-2"></div>
+<div class="absolute -bottom-10 left-1/3 w-72 h-72 rounded-full bg-tertiary-fixed/25 blur-3xl pointer-events-none animate-float-3"></div>
+<!-- Scattered Doodle 1: Little sparkle star -->
+<div class="hidden md:block absolute top-28 left-12 text-secondary/60 animate-float-1 pointer-events-none">
+<svg fill="currentColor" height="34" viewBox="0 0 24 24" width="34">
+<path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z"></path>
+</svg>
+</div>
+<div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+<!-- Left Text Content -->
+<div class="lg:col-span-7 flex flex-col items-start space-y-6">
+<!-- Subtle badge with warm plant leaf icon -->
+<div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-surface-container-low border border-primary/10 shadow-sm text-primary">
+<span class="material-symbols-outlined text-base text-secondary">eco</span>
+<span class="font-label-md text-label-md tracking-wide">Bursa Nilüfer &amp; Şefkatli Online Terapi</span>
+</div>
+<!-- Main Heading with Hand-drawn Underline & Accent Colors -->
+<h1 class="font-display-lg text-display-lg md:text-[52px] md:leading-[64px] text-primary tracking-tight max-w-2xl">
+                Kendinizi <span class="relative inline-block text-secondary italic font-serif">anlamanın<svg class="absolute -bottom-2.5 left-0 w-full text-secondary/70 overflow-visible" fill="none" height="10" preserveAspectRatio="none" viewBox="0 0 100 12"><path d="M2,8 C25,2 75,12 98,4 C80,10 40,8 10,10" stroke="currentColor" stroke-linecap="round" stroke-width="3"></path></svg></span>, iyi hissetmenin <span class="text-secondary italic">ilk adımı</span> burada başlıyor.
+              </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+                Her ruh kendi ritminde iyileşir. Bursa Nilüfer'deki sıcak seans odamızda yüz yüze veya evinizin huzurunda güvenli, bilimsel ve şefkatli bir terapi alanı paylaşıyoruz.
+              </p>
+<!-- Sticky Note Doodle Badge -->
+<div class="inline-block transform -rotate-2 hover:rotate-0 transition-transform bg-[#fff8db] border border-amber-200/80 px-4 py-2.5 rounded-xl shadow-sm text-amber-900">
+<div class="flex items-center gap-2">
+<span class="text-amber-600 font-handwriting text-2xl leading-none">✿</span>
+<span class="font-handwriting text-lg leading-tight text-amber-950 font-bold">"İyi hissetmek mümkün, kendi hızınızda ilerleyin."</span>
+</div>
+</div>
+<!-- Hero Action Buttons -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="animate-pulse-glow inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5" href="#hizli-randevu">
+<span class="material-symbols-outlined text-lg">calendar_month</span>
+<span class="">Randevu Al</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-surface-container-lowest hover:bg-surface-container text-primary font-label-lg text-label-lg border border-primary/10 shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5 group" href="https://wa.me/905550000000" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-xl text-secondary animate-wiggle-periodic">chat</span>
+<span class="">WhatsApp'tan Yazın</span>
+</a>
+</div>
+<!-- Humanized Trust Note -->
+<div class="pt-4 flex items-center gap-3 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-secondary text-xl">favorite</span>
+<span class="">Çekinmeyin; ilk adımı güvenle ve yargılanmadan birlikte atıyoruz.</span>
+</div>
+</div>
+<!-- Right Hero Visual: Polaroid-Style Portrait with Washi Tape & Hand-drawn Doodle Note -->
+<div class="lg:col-span-5 relative flex justify-center mt-6 lg:mt-0">
+<!-- Floating Hand-drawn Note & Arrow next to photo -->
+<div class="absolute -top-10 -left-6 md:-left-12 z-20 hidden sm:flex flex-col items-end transform -rotate-6 animate-float-2 pointer-events-none">
+<span class="font-handwriting text-2xl text-secondary font-bold tracking-wide bg-surface-container-lowest/90 px-3 py-1 rounded-full shadow-sm border border-secondary/20">
+                  Merhaba, seans odama hoş geldiniz ✨
+                </span>
+<svg class="w-12 h-10 text-secondary mt-1 mr-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 60 50">
+<path d="M10,5 C30,12 45,20 48,38"></path>
+<path d="M40,32 L49,40 L52,28"></path>
+</svg>
+</div>
+<div class="relative w-full max-w-sm sm:max-w-md transform rotate-1 hover:rotate-0 transition-transform duration-500">
+<!-- Washi Tape at top center -->
+<div class="washi-tape absolute -top-3.5 left-1/2 -translate-x-1/2 w-28 h-7 z-30 opacity-90 rounded-sm"></div>
+<!-- Polaroid frame -->
+<div class="bg-surface-container-lowest p-4 sm:p-5 pb-6 sm:pb-7 rounded-2xl shadow-[0_16px_40px_rgba(43,76,65,0.12)] border border-primary/5 transition-all">
+<div class="relative rounded-xl overflow-hidden aspect-[4/4.5] bg-surface-container">
+<img alt="Uzm. Psk. Tuba Güngör Aslan - Seans Odası" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_-4F7MnxiUvGCBGI6bKGCCPzlFFVq_haFVZhRiZNRUXK4SwQZXWvdSxTOimZAUDY2ZqOW-XvKFzXF9rKvBfCEF-nTawssBSqCwZLwB6SzqDoRMarbUtaYTrBruMooZggcABxT5HkCEXrxm3t7lz3mVoZCHV1YIy3WeBX-CyrHJiX4AVhti1a5A3Vw1pZvCdLxte52s5H4L9SpS1IqVcfJbJiSrYhD2Wj9YINLDki4OOcIBwN0QzR2">
+<div class="absolute bottom-3 right-3 bg-surface-container-lowest/85 backdrop-blur-md px-3 py-1 rounded-full text-xs font-handwriting text-primary font-bold shadow-sm">
+                      Bursa Nilüfer
+                    </div>
+</div>
+<!-- Polaroid Caption area -->
+<div class="pt-4 flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary leading-tight">Tuba Güngör Aslan</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-0.5">Uzman Klinik Psikolog</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-fixed/70 text-on-primary-fixed flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-xl">self_improvement</span>
+</div>
+</div>
+</div>
+<!-- Small pin / sticker at bottom corner -->
+<div class="absolute -bottom-4 -right-4 z-20 bg-secondary text-on-secondary px-3.5 py-1.5 rounded-full shadow-md transform rotate-6 text-xs font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">verified</span>
+<span class="">12+ Yıl Klinik Tecrübe</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ORGANIC WAVE DIVIDER (Top to Marquee) -->
+<div class="w-full overflow-hidden leading-none text-surface-container-low">
+<svg class="w-full h-8 md:h-12" fill="currentColor" preserveAspectRatio="none" viewBox="0 0 1200 120">
+<path d="M0,0 C150,90 350,-40 500,45 C650,130 900,10 1200,60 L1200,120 L0,120 Z"></path>
+</svg>
+</div>
+<!-- NEW SECTION: INFINITE MARQUEE (Eğik Pastel Şerit) -->
+<div class="w-full bg-surface-container-low py-4 overflow-hidden border-y border-outline-variant/30 transform -rotate-1 scale-[1.02] shadow-sm marquee-container">
+<div class="marquee-track flex items-center gap-8 text-primary font-label-lg whitespace-nowrap">
+<div class="flex items-center gap-8">
+<span class="flex items-center gap-2"><span class="">✦</span> Kaygı &amp; Anksiyete</span>
+<span class="text-secondary font-serif text-lg">•</span>
+<span class="flex items-center gap-2"><span class="">✦</span> Panik Atak</span>
+<span class="text-secondary font-serif text-lg">•</span>
+<span class="flex items-center gap-2"><span class="">✦</span> Çift ve Evlilik Terapisi</span>
+<span class="text-secondary font-serif text-lg">•</span>
+<span class="flex items-center gap-2"><span class="">✦</span> EMDR ile Travma İyileşmesi</span>
+<span class="text-secondary font-serif text-lg">•</span>
+<span class="flex items-center gap-2"><span class="">✦</span> Yas &amp; Kayıp Süreci</span>
+<span class="text-secondary font-serif text-lg">•</span>
+<span class="flex items-center gap-2"><span class="">✦</span> Sınav &amp; Performans Kaygısı</span>
+<span class="text-secondary font-serif text-lg">•</span>
+<span class="flex items-center gap-2"><span class="">✦</span> Anne-Baba Danışmanlığı</span>
+<span class="text-secondary font-serif text-lg">•</span>
+<span class="flex items-center gap-2"><span class="">✦</span> İçsel Denge &amp; Şefkat</span>
+<span class="text-secondary font-serif text-lg">•</span>
+</div>
+<!-- Duplicate for seamless loop -->
+<div class="flex items-center gap-8">
+<span class="flex items-center gap-2"><span class="">✦</span> Kaygı &amp; Anksiyete</span>
+<span class="text-secondary font-serif text-lg">•</span>
+<span class="flex items-center gap-2"><span class="">✦</span> Panik Atak</span>
+<span class="text-secondary font-serif text-lg">•</span>
+<span class="flex items-center gap-2"><span class="">✦</span> Çift ve Evlilik Terapisi</span>
+<span class="text-secondary font-serif text-lg">•</span>
+<span class="flex items-center gap-2"><span class="">✦</span> EMDR ile Travma İyileşmesi</span>
+<span class="text-secondary font-serif text-lg">•</span>
+<span class="flex items-center gap-2"><span class="">✦</span> Yas &amp; Kayıp Süreci</span>
+<span class="text-secondary font-serif text-lg">•</span>
+<span class="flex items-center gap-2"><span class="">✦</span> Sınav &amp; Performans Kaygısı</span>
+<span class="text-secondary font-serif text-lg">•</span>
+<span class="flex items-center gap-2"><span class="">✦</span> Anne-Baba Danışmanlığı</span>
+<span class="text-secondary font-serif text-lg">•</span>
+<span class="flex items-center gap-2"><span class="">✦</span> İçsel Denge &amp; Şefkat</span>
+<span class="text-secondary font-serif text-lg">•</span>
+</div>
+</div>
+</div>
+<!-- NEW SECTION: SAYAÇ ANİMASYONU (STAT COUNTERS) -->
+<section class="w-full bg-surface-container-low py-14 border-b border-outline-variant/30">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 text-center" id="stat-counters">
+<div class="flex flex-col items-center p-4 rounded-2xl bg-surface-container-lowest/60 border border-primary/5 shadow-sm transform hover:-translate-y-1 transition-all">
+<span class="font-display-lg text-4xl md:text-5xl text-primary font-bold tracking-tight">
+<span class="counter-number" data-target="62">62</span><span class="text-secondary">+</span>
+</span>
+<span class="font-headline-sm text-base md:text-lg text-primary mt-1 font-serif">Danışan Görüşü</span>
+<p class="font-body-sm text-xs md:text-sm text-on-surface-variant mt-0.5">Doğrulanmış gerçek deneyimler</p>
+</div>
+<div class="flex flex-col items-center p-4 rounded-2xl bg-surface-container-lowest/60 border border-primary/5 shadow-sm transform hover:-translate-y-1 transition-all">
+<span class="font-display-lg text-4xl md:text-5xl text-secondary font-bold tracking-tight flex items-center justify-center">
+<span class="">5.0</span>
+<span class="material-symbols-outlined text-2xl text-secondary ml-1" style="font-variation-settings: 'FILL' 1;">star</span>
+</span>
+<span class="font-headline-sm text-base md:text-lg text-primary mt-1 font-serif">Tam Memnuniyet</span>
+<p class="font-body-sm text-xs md:text-sm text-on-surface-variant mt-0.5">DoktorTakvimi hasta puanı</p>
+</div>
+<div class="flex flex-col items-center p-4 rounded-2xl bg-surface-container-lowest/60 border border-primary/5 shadow-sm transform hover:-translate-y-1 transition-all">
+<span class="font-display-lg text-4xl md:text-5xl text-primary font-bold tracking-tight">
+<span class="counter-number" data-target="12">12</span><span class="text-secondary">+</span>
+</span>
+<span class="font-headline-sm text-base md:text-lg text-primary mt-1 font-serif">Yıl Deneyim</span>
+<p class="font-body-sm text-xs md:text-sm text-on-surface-variant mt-0.5">Bursa Nilüfer &amp; Klinik vaka tecrübesi</p>
+</div>
+<div class="flex flex-col items-center p-4 rounded-2xl bg-surface-container-lowest/60 border border-primary/5 shadow-sm transform hover:-translate-y-1 transition-all">
+<span class="font-display-lg text-4xl md:text-5xl text-primary font-bold tracking-tight">
+<span class="counter-number" data-target="35">35</span><span class="text-secondary">+</span>
+</span>
+<span class="font-headline-sm text-base md:text-lg text-primary mt-1 font-serif">Uzmanlık Alanı</span>
+<p class="font-body-sm text-xs md:text-sm text-on-surface-variant mt-0.5">Bireysel, çift, çocuk ve ergen</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ORGANIC WAVE DIVIDER (To About Section) -->
+<div class="w-full overflow-hidden leading-none text-surface">
+<svg class="w-full h-8 md:h-12 bg-surface-container-low" fill="currentColor" preserveAspectRatio="none" viewBox="0 0 1200 120">
+<path d="M0,0 C300,100 800,10 1200,90 L1200,120 L0,120 Z"></path>
+</svg>
+</div>
+<!-- SECTION 2: GÜVEN ŞERİDİ (Humanized, Soft organic cards) -->
+<section class="w-full py-8 bg-surface">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+<div class="flex items-start gap-4 p-5 rounded-2xl bg-surface-container-low/70 border border-primary/5 hover:bg-surface-container-lowest hover:shadow-md transition-all">
+<div class="w-12 h-12 rounded-2xl bg-primary-fixed text-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-2xl">workspace_premium</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-label-lg text-label-lg text-primary">Uzman Klinik Psikolog</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Bilimsel, akredite ve şefkatli yaklaşım</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-5 rounded-2xl bg-surface-container-low/70 border border-primary/5 hover:bg-surface-container-lowest hover:shadow-md transition-all">
+<div class="w-12 h-12 rounded-2xl bg-secondary-fixed text-secondary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-2xl">meeting_room</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-label-lg text-label-lg text-primary">Yüz Yüze ve Online</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Nilüfer FSM'de sakin oda veya evinizin konforu</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-5 rounded-2xl bg-surface-container-low/70 border border-primary/5 hover:bg-surface-container-lowest hover:shadow-md transition-all">
+<div class="w-12 h-12 rounded-2xl bg-tertiary-fixed text-tertiary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-2xl">key</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-label-lg text-label-lg text-primary">Tam Mahremiyet İlkesi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Koşulsuz gizlilik ve etik mesleki sınırlar</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-5 rounded-2xl bg-surface-container-low/70 border border-primary/5 hover:bg-surface-container-lowest hover:shadow-md transition-all">
+<div class="w-12 h-12 rounded-2xl bg-primary-fixed text-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-2xl">nest_multi_room</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-label-lg text-label-lg text-primary">Kişiye Özel Rota</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Kalıplardan uzak, tamamen sizin ihtiyacınıza özel</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: TANIŞALIM (Handcrafted Warm Storytelling Spotlight) -->
+<section class="w-full py-16 md:py-24 bg-surface relative">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="bg-surface-container-low rounded-3xl p-8 md:p-14 border border-primary/10 shadow-md overflow-hidden relative">
+<!-- Background organic blush -->
+<div class="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-secondary-fixed/20 blur-3xl pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+<!-- Left: Office photo styled as handcrafted memory frame -->
+<div class="lg:col-span-5 relative">
+<!-- Washi tape at top left corner -->
+<div class="washi-tape absolute -top-3 left-6 w-24 h-6 z-20 transform -rotate-6"></div>
+<div class="w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-lg border-4 border-surface-container-lowest bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="A candid, warm photographic scene inside an elegant psychological counseling office. A cozy beige arm chair next to a potted ficus plant and a side table with clean ceramic coffee cups, bathed in soft afternoon natural sunlight creating peaceful shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACRfSLSexpqK-yZaqTsULEKP1MuaN6nrDa2Qg11tVA3_UJaMZh3NRbUm4CH3Np01_tnLgPMOiZa8EyyFus0l7wl7EmXE9bIkDVJWLUVW4jL0Kd0MN9k7OJd0Rp9u2vN7CUTiPFICUEZL2HQ0OMgTl9Y9q3MVd-o8beHCA_Vw_szanEgJJLUoYEYj7KQcRj4QQhFOGMc_y5gT44JFHWGGZxmw8du09bAxt__5y4q-g">
+</div>
+<div class="absolute -bottom-4 -right-2 bg-secondary text-on-secondary px-5 py-3 rounded-2xl shadow-lg border border-secondary-container transform rotate-2">
+<span class="font-handwriting text-lg leading-none block text-secondary-fixed">Sıcak Seans Odası</span>
+<span class="font-headline-sm text-headline-sm">Şefkat &amp; Bilim</span>
+</div>
+</div>
+<!-- Right: Empathetic text -->
+<div class="lg:col-span-7 flex flex-col space-y-6">
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-lg">favorite</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Tanışalım</span>
+<span class="text-secondary/50 font-handwriting text-xl ml-2">~ içten bir hoş geldin</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary leading-tight">
+                  Merhaba, ben Tuba.
+                </h2>
+<div class="pl-5 py-2 border-l-4 border-secondary-container bg-surface-container-lowest/60 rounded-r-2xl shadow-sm">
+<p class="font-headline-sm text-headline-sm text-primary italic font-medium leading-relaxed">
+                    "Zorlayıcı dönemlerinizde yalnız değilsiniz. İçsel dengenizi ve iyi oluşunuzu yeniden keşfetmeniz için buradayım."
+                  </p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Uzun yıllara dayanan klinik yolculuğum boyunca; kaygılar, geçmişten gelen travmatik yükler, ilişki tıkanıklıkları ve ebeveynlik çalkantılarıyla baş başa kalan danışanlarıma eşlik ettim. Terapiyi bir 'kusur giderme' değil, insanın kendiyle barışma ve güvenli bağ kurma sığınağı olarak görüyorum. Kanıta dayalı bilişsel ve dinamik ekolleri, insani şefkatle harmanlıyoruz.
+                </p>
+<div class="pt-2 flex flex-wrap items-center gap-6">
+<a class="inline-flex items-center gap-2 font-label-lg text-label-lg text-primary hover:text-secondary group transition-colors" href="hakkimda.html">
+<span class="underline underline-offset-4 decoration-secondary/50 group-hover:decoration-secondary">Yolculuğumu &amp; Eğitimlerimi İnceleyin</span>
+<span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<div class="h-4 w-px bg-outline-variant"></div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-base">pin_drop</span>
+                    Nilüfer / Bursa Muayenehanesi
+                  </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: ASİMETRİK VE İNSANİ ÇALIŞMA ALANLARI (Organic Asymmetric Layout) -->
+<section class="w-full py-20 bg-surface-container-low/70 relative">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="font-handwriting text-2xl text-secondary font-bold">~ yol arkadaşlığı alanları ~</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Çalışma Alanlarımız</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-xl">
+                Her ruhun hikayesi ve ihtiyacı farklıdır. Bilimsel çerçeveyi sıcak bir dinleme ortamıyla birleştiren terapi yaklaşımlarımız:
+              </p>
+</div>
+<a class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-surface-container-lowest text-primary hover:bg-primary hover:text-on-primary font-label-lg text-label-lg transition-all shadow-sm border border-primary/10" href="calisma-alanlari.html">
+<span class="">Tüm Detayları Görün</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+<!-- Asymmetric grid: Cards have subtle rotation, unequal visual weights, organic stamps -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+<!-- Kart 1: Bireysel Terapi (Öne çıkan biraz daha geniş hissettiren kart) -->
+<div class="group bg-surface-container-lowest p-7 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between border border-primary/5 hover:-translate-y-1.5 relative overflow-hidden">
+<span class="absolute top-3 right-4 font-handwriting text-xs text-secondary/60">#içseldenge</span>
+<div>
+<div class="w-12 h-12 rounded-2xl bg-primary-fixed text-primary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">spa</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2.5">Bireysel Terapi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  İçsel çatışmalar, anksiyete, depresyon ve yaşam krizlerinde duygusal netlik ve dayanıklılık kazanın.
+                </p>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mt-6 pt-4 border-t border-surface-container flex items-center gap-1">
+<span class="">Ayrıntıları Gör</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span>
+</span>
+</div>
+<!-- Kart 2: Çift ve Evlilik Terapisi -->
+<div class="group bg-surface-container-lowest p-7 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between border border-primary/5 hover:-translate-y-1.5 relative overflow-hidden md:translate-y-2">
+<span class="absolute top-3 right-4 font-handwriting text-xs text-secondary/60">#güvenlibağ</span>
+<div>
+<div class="w-12 h-12 rounded-2xl bg-secondary-fixed text-secondary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2.5">Çift &amp; Evlilik Terapisi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  İlişki dinamikleri, iletişim güçlükleri, güven sarsılmaları ve çatışma sonrası bağları onarma.
+                </p>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mt-6 pt-4 border-t border-surface-container flex items-center gap-1">
+<span class="">Ayrıntıları Gör</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span>
+</span>
+</div>
+<!-- Kart 3: Aile Terapisi -->
+<div class="group bg-surface-container-lowest p-7 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between border border-primary/5 hover:-translate-y-1.5 relative overflow-hidden">
+<span class="absolute top-3 right-4 font-handwriting text-xs text-secondary/60">#birliktelik</span>
+<div>
+<div class="w-12 h-12 rounded-2xl bg-primary-fixed text-primary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">family_restroom</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2.5">Aile Terapisi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Kuşaklararası bağlar, aile içi sağlıklı sınırlar ve ortak kriz yönetimi için uzlaşmacı ortam.
+                </p>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mt-6 pt-4 border-t border-surface-container flex items-center gap-1">
+<span class="">Ayrıntıları Gör</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span>
+</span>
+</div>
+<!-- Kart 4: Çocuk ve Ergen Terapisi -->
+<div class="group bg-surface-container-lowest p-7 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between border border-primary/5 hover:-translate-y-1.5 relative overflow-hidden md:translate-y-2">
+<span class="absolute top-3 right-4 font-handwriting text-xs text-secondary/60">#gelişim</span>
+<div>
+<div class="w-12 h-12 rounded-2xl bg-tertiary-fixed text-tertiary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">sentiment_satisfied</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2.5">Çocuk &amp; Ergen Terapisi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Duygusal regülasyon, okul uyumu, sınav stresi ve çalkantılı ergenlik döneminde profesyonel destek.
+                </p>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mt-6 pt-4 border-t border-surface-container flex items-center gap-1">
+<span class="">Ayrıntıları Gör</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span>
+</span>
+</div>
+<!-- Kart 5: EMDR Terapi -->
+<div class="group bg-surface-container-lowest p-7 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between border border-primary/5 hover:-translate-y-1.5 relative overflow-hidden">
+<span class="absolute top-3 right-4 font-handwriting text-xs text-secondary/60">#yenidenişleme</span>
+<div>
+<div class="w-12 h-12 rounded-2xl bg-primary-fixed text-primary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">visibility</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2.5">EMDR Terapisi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Travma, olumsuz yaşam deneyimleri ve kayıp sonrası zihinsel duyarsızlaştırma ve iyileşme süreci.
+                </p>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mt-6 pt-4 border-t border-surface-container flex items-center gap-1">
+<span class="">Ayrıntıları Gör</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span>
+</span>
+</div>
+<!-- Kart 6: Bilişsel Davranışçı Terapi -->
+<div class="group bg-surface-container-lowest p-7 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between border border-primary/5 hover:-translate-y-1.5 relative overflow-hidden md:translate-y-2">
+<span class="absolute top-3 right-4 font-handwriting text-xs text-secondary/60">#farkındalık</span>
+<div>
+<div class="w-12 h-12 rounded-2xl bg-secondary-fixed text-secondary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">psychology_alt</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2.5">Bilişsel Davranışçı Terapi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Otomatik olumsuz düşünce kalıplarını yeniden yapılandırma ve işlevsel davranış modelleri kurma.
+                </p>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mt-6 pt-4 border-t border-surface-container flex items-center gap-1">
+<span class="">Ayrıntıları Gör</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span>
+</span>
+</div>
+<!-- Kart 7: Anne-Baba Eğitimi -->
+<div class="group bg-surface-container-lowest p-7 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between border border-primary/5 hover:-translate-y-1.5 relative overflow-hidden">
+<span class="absolute top-3 right-4 font-handwriting text-xs text-secondary/60">#şefkatlisınırlar</span>
+<div>
+<div class="w-12 h-12 rounded-2xl bg-primary-fixed text-primary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">escalator_warning</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2.5">Anne-Baba Eğitimi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Bilinçli ebeveynlik tutumları, şefkatli sınırlar koyma ve pozitif disiplin konusunda koçluk.
+                </p>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mt-6 pt-4 border-t border-surface-container flex items-center gap-1">
+<span class="">Ayrıntıları Gör</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span>
+</span>
+</div>
+<!-- Kart 8: Online Terapi -->
+<div class="group bg-surface-container-lowest p-7 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between border border-primary/5 hover:-translate-y-1.5 relative overflow-hidden md:translate-y-2">
+<span class="absolute top-3 right-4 font-handwriting text-xs text-secondary/60">#mekansızhuzur</span>
+<div>
+<div class="w-12 h-12 rounded-2xl bg-tertiary-fixed text-tertiary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">laptop_chromebook</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2.5">Online Terapi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Mekan sınırlaması olmaksızın, kendi evinizin rahatlığında gizli, şifreli ve güvenli video seanslar.
+                </p>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mt-6 pt-4 border-t border-surface-container flex items-center gap-1">
+<span class="">Ayrıntıları Gör</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span>
+</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: DESTEK KONULARI (Pill Cloud with Friendly Atmosphere) -->
+<section class="w-full py-16 bg-surface">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 text-center">
+<span class="font-handwriting text-2xl text-secondary font-bold block mb-1">birlikte aşabiliriz</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-3">Hangi konuda destek arıyorsunuz?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto mb-9">
+            İçinden geçtiğiniz duygu ne kadar ağır gelirse gelsin, adını koymak ve konuşmak iyileşmenin ilk kapısıdır.
+          </p>
+<div class="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto" id="pill-container">
+<button class="px-5 py-2.5 rounded-full bg-surface-container-low hover:bg-primary hover:text-on-primary text-on-surface font-label-lg text-label-lg transition-all shadow-sm hover:scale-105">Anksiyete</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container-low hover:bg-primary hover:text-on-primary text-on-surface font-label-lg text-label-lg transition-all shadow-sm hover:scale-105">Panik Atak</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container-low hover:bg-primary hover:text-on-primary text-on-surface font-label-lg text-label-lg transition-all shadow-sm hover:scale-105">Depresyon</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container-low hover:bg-primary hover:text-on-primary text-on-surface font-label-lg text-label-lg transition-all shadow-sm hover:scale-105">Öfke Kontrolü</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container-low hover:bg-primary hover:text-on-primary text-on-surface font-label-lg text-label-lg transition-all shadow-sm hover:scale-105">Özgüven Sorunu</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container-low hover:bg-primary hover:text-on-primary text-on-surface font-label-lg text-label-lg transition-all shadow-sm hover:scale-105">Sınav Kaygısı</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container-low hover:bg-primary hover:text-on-primary text-on-surface font-label-lg text-label-lg transition-all shadow-sm hover:scale-105">Yas ve Kayıp</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container-low hover:bg-primary hover:text-on-primary text-on-surface font-label-lg text-label-lg transition-all shadow-sm hover:scale-105">Travma (TSSB)</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container-low hover:bg-primary hover:text-on-primary text-on-surface font-label-lg text-label-lg transition-all shadow-sm hover:scale-105">İlişki Problemleri</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container-low hover:bg-primary hover:text-on-primary text-on-surface font-label-lg text-label-lg transition-all shadow-sm hover:scale-105">Boşanma Süreci</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container-low hover:bg-primary hover:text-on-primary text-on-surface font-label-lg text-label-lg transition-all shadow-sm hover:scale-105">Obsesif Kompulsif Bozukluk (OKB)</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container-low hover:bg-primary hover:text-on-primary text-on-surface font-label-lg text-label-lg transition-all shadow-sm hover:scale-105">Sosyal Fobi</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container-low hover:bg-primary hover:text-on-primary text-on-surface font-label-lg text-label-lg transition-all shadow-sm hover:scale-105">Kardeş Kıskançlığı</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container-low hover:bg-primary hover:text-on-primary text-on-surface font-label-lg text-label-lg transition-all shadow-sm hover:scale-105">Dikkat ve Motivasyon</button>
+</div>
+</div>
+</section>
+<!-- SECTION 6: TERAPİ NASIL BAŞLAR? (Hand-drawn path connector & 4 steps) -->
+<section class="w-full py-20 bg-surface-container-low relative">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="font-handwriting text-2xl text-secondary font-bold block mb-1">adım adım yanınızdayız</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Terapi Süreci Nasıl Başlar?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+              Belirsizlikleri ortadan kaldıran, tamamen sizin hazır oluşunuza saygı duyan şeffaf bir yol haritası.
+            </p>
+</div>
+<!-- Connecting curvy SVG dashed line on desktop -->
+<div class="relative">
+<div class="hidden lg:block absolute top-12 left-12 right-12 h-1 z-0 pointer-events-none">
+<svg class="w-full h-12" fill="none" preserveAspectRatio="none" viewBox="0 0 1000 40">
+<path d="M50,20 Q270,-10 500,20 T950,20" stroke="#c1c8c3" stroke-dasharray="6 6" stroke-width="2.5"></path>
+</svg>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+<!-- Step 1 -->
+<div class="group bg-surface-container-lowest p-7 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col border border-primary/5 hover:-translate-y-1">
+<div class="w-14 h-14 rounded-full bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform">
+                  1
+                </div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2.5">Bize Ulaşın</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  WhatsApp, telefon veya formu kullanarak çekinmeden yazın. Size en kısa sürede sıcak bir dönüş yapalım.
+                </p>
+</div>
+<!-- Step 2 -->
+<div class="group bg-surface-container-lowest p-7 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col border border-primary/5 hover:-translate-y-1">
+<div class="w-14 h-14 rounded-full bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform">
+                  2
+                </div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2.5">İlk Tanışma &amp; Değerlendirme</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Neler yaşadığınızı, beklentilerinizi dinleyelim; mevcut zorluğu birlikte güvenli bir çerçeveye oturtalım.
+                </p>
+</div>
+<!-- Step 3 -->
+<div class="group bg-surface-container-lowest p-7 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col border border-primary/5 hover:-translate-y-1">
+<div class="w-14 h-14 rounded-full bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform">
+                  3
+                </div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2.5">Size Özel Terapi Planı</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  İhtiyacınıza uygun ekolü (EMDR, BDT, Dinamik) ve görüşme sıklığını sizin hayat temponuza göre belirleyelim.
+                </p>
+</div>
+<!-- Step 4 -->
+<div class="group bg-surface-container-lowest p-7 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col border border-primary/5 hover:-translate-y-1">
+<div class="w-14 h-14 rounded-full bg-secondary text-on-secondary font-headline-sm text-headline-sm flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform">
+                  4
+                </div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2.5">İlerleme &amp; İçsel Kazanım</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Güvenli seanslarla yol alırken duygusal dayanıklılığınızı, farkındalığınızı ve iç huzurunuzu büyütün.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: ONLINE TERAPİ ÖZEL BÖLÜMÜ (Cozy, Dark Sage with handcrafted touch) -->
+<section class="w-full py-20 bg-surface">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="bg-primary text-on-primary rounded-3xl p-8 md:p-14 shadow-xl overflow-hidden relative border border-primary-container">
+<!-- Ambient glowing blobs -->
+<div class="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-primary-container blur-2xl opacity-60"></div>
+<div class="absolute -bottom-20 -left-20 w-72 h-72 rounded-full bg-secondary/30 blur-2xl"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+<div class="lg:col-span-7 space-y-6">
+<div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm">home_pin</span>
+<span class="">Mekandan Bağımsız Destek</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-primary leading-tight">
+                  Nerede olursanız olun, yanınızdayım.
+                </h2>
+<p class="font-body-lg text-body-lg text-on-primary-container leading-relaxed max-w-xl">
+                  Bursa dışından, yoğun çalışma temposundan veya yurt dışından danışanlar için konforlu, uçtan uca şifreli ve yüz yüze görüşmeyle eşit etkiye sahip online terapi. Kendi güvenli alanınızda bir bardak çayınızla seansa katılabilirsiniz.
+                </p>
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-surface text-primary hover:bg-surface-container font-label-lg text-label-lg shadow-md transition-all hover:scale-105" href="#hizli-randevu">
+<span class="">Online Randevu Oluştur</span>
+<span class="material-symbols-outlined text-base">video_call</span>
+</a>
+<div class="flex items-center gap-2 text-on-primary-container font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary-fixed">public</span>
+<span class="">Tüm dünyadan Türkçe danışan kabulü</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5">
+<div class="bg-primary-container/70 backdrop-blur-md p-6 md:p-8 rounded-2xl border border-primary/20 space-y-5 shadow-inner">
+<div class="flex items-center gap-3 pb-3 border-b border-white/10">
+<span class="material-symbols-outlined text-2xl text-secondary-fixed">shield_lock</span>
+<span class="font-label-lg text-label-lg text-on-primary">Uçtan Uca Şifreli Platformlar</span>
+</div>
+<div class="flex items-center gap-3 pb-3 border-b border-white/10">
+<span class="material-symbols-outlined text-2xl text-secondary-fixed">schedule</span>
+<span class="font-label-lg text-label-lg text-on-primary">Farklı Saat Dilimlerine Uygunluk</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-2xl text-secondary-fixed">couch</span>
+<span class="font-label-lg text-label-lg text-on-primary">Yol veya Trafik Stresi Olmadan</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 8: DANIŞAN GÖRÜŞLERİ (Warm Organic Paper Notes & Verified Badge) -->
+<section class="w-full py-20 bg-surface-container-low/70">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+<div>
+<span class="font-handwriting text-2xl text-secondary font-bold block mb-1">içten geri bildirimler</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Danışan Deneyimleri</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-xl">
+                Birlikte yol yürüdüğümüz danışanlarımızın mahremiyet kuralları çerçevesinde paylaştığı samimi sözler.
+              </p>
+</div>
+<!-- DoktorTakvimi Rozeti -->
+<div class="inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-surface-container-lowest shadow-sm border border-primary/10">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed text-secondary flex items-center justify-center font-bold">
+                DT
+              </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md ml-1 text-primary">5.0</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">DoktorTakvimi'nde 62 Görüş</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Review 1: Soft paper card with tilt -->
+<div class="bg-surface-container-lowest p-8 rounded-3xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-primary/5 transform -rotate-1 hover:rotate-0">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-handwriting text-2xl text-secondary/40">“</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic">
+                  "Tuba Hanım ile yürüttüğümüz bireysel terapi sürecinde anksiyetemin kökenlerini anlamayı ve onunla savaşmak yerine barışmayı öğrendim. Odanın sıcaklığı insana gerçekten güvende olduğunu hissettiriyor."
+                </p>
+</div>
+<div class="pt-6 mt-6 flex items-center gap-3 border-t border-surface-container">
+<div class="w-10 h-10 rounded-full bg-primary-fixed text-primary font-label-lg flex items-center justify-center font-bold">
+                  E. K.
+                </div>
+<div>
+<span class="font-label-lg text-label-lg text-primary block">E. K. (32)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Bireysel Terapi Danışanı</span>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-3xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-primary/5 transform md:translate-y-2 hover:translate-y-0">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-handwriting text-2xl text-secondary/40">“</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic">
+                  "Evliliğimizin en kırılgan noktasında kapısını çaldık. Tarafsız, sakin ve birbirimizi dinlememizi sağlayan yönlendirmeleriyle ilişkimizde tıkandığımız yerleri açtık. Minnettarız."
+                </p>
+</div>
+<div class="pt-6 mt-6 flex items-center gap-3 border-t border-surface-container">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-secondary font-label-lg flex items-center justify-center font-bold">
+                  M. S.
+                </div>
+<div>
+<span class="font-label-lg text-label-lg text-primary block">M. &amp; S. Ç.</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Çift Terapisi Danışanı</span>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-3xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-primary/5 transform rotate-1 hover:rotate-0">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-handwriting text-2xl text-secondary/40">“</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic">
+                  "Almanya'da yaşıyorum ve Türkçe terapi alabileceğim yetkin bir uzman arıyordum. Online seanslar sayesinde çocukluğumdan gelen travmaları EMDR ile başarıyla çalıştık. Harika bir klinik deneyim."
+                </p>
+</div>
+<div class="pt-6 mt-6 flex items-center gap-3 border-t border-surface-container">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed text-tertiary font-label-lg flex items-center justify-center font-bold">
+                  D. Y.
+                </div>
+<div>
+<span class="font-label-lg text-label-lg text-primary block">D. Y. (29)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Online EMDR Danışanı</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 9: BLOG'DAN ÖNE ÇIKANLAR (Arched corners & Ken-Burns hover) -->
+<section class="w-full py-20 bg-surface">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+<div>
+<span class="font-handwriting text-2xl text-secondary font-bold block mb-1">ruhunuza iyi gelecek satırlar</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Okuma Odası &amp; Blog</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-xl">
+                Ruh sağlığı, ilişkiler ve ebeveynlik üzerine bilimsel temelli ve samimi yazılar.
+              </p>
+</div>
+<a class="inline-flex items-center gap-2 font-label-lg text-label-lg text-primary hover:text-secondary group transition-colors" href="#blog">
+<span class="underline underline-offset-4">Tüm Yazıları Keşfet</span>
+<span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Post 1 -->
+<article class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group border border-primary/5">
+<div class="w-full h-56 overflow-hidden bg-surface-container relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A peaceful morning scene showing a ceramic cup of warm tea on a wooden table beside a blank journal, soft sunlight streaming in, calming psychological wellness mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOEwDTMfColBDHYH-cDpodBL1JbGGUBmgMU7Ym4w3Jmexj9cjZ_DgK7T8O47H4jPV68JmWqccnB7xZHzRQmTP7Nl0jYIKiA2kJ5CFjRHmFof0VNxw9ujAkq-onedaRcMZORzs-8v7jT-YEPjoFQgd17rE-cpdeiJQCcdqyhuiGtI6lnmpUrvFwUcV5Om_XeAprvRiyj9dsoI5QmFNSQq8jYaVF9Rtkkm3MAUxrQCY">
+<span class="absolute top-3 left-3 bg-surface/90 backdrop-blur-sm text-primary px-3 py-1 rounded-full text-xs font-semibold">5 dk okuma</span>
+</div>
+<div class="p-7 flex flex-col flex-1 justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Kaygı Yönetimi</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-2 group-hover:text-secondary transition-colors">
+                    Kaygı ile Barışmak: Zihninizi Sakinleştirmenin 5 Yolu
+                  </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-3 leading-relaxed">
+                    Kaygıyı bir tehdit yerine bedenin koruyucu sinyali olarak kabul edip yönetmenin pratik adımları.
+                  </p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary mt-6 group-hover:text-secondary transition-colors" href="#blog">
+<span class="">Yazıyı Oku</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span>
+</a>
+</div>
+</article>
+<!-- Post 2 -->
+<article class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group border border-primary/5">
+<div class="w-full h-56 overflow-hidden bg-surface-container relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Two people sitting in comfortable armchairs engaged in an empathetic, calm conversation in a warm, tasteful minimalist room with soft natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXy5buteuxKcnj8gIAirPrdNJezKnpUtZlqWe39PVBBqq2lc8C6Z9WqEYUQ0LDuYwXFBMYKm0vocoBRhvgVppEB-TIHRJsZPh4yH4mwZWooHjf_AKULrbrIe7e8wL1y9bf9SRnu9mHP6Jh19PN6eOg8DrODVdI7j-yVm_jZjd5CjSMsxBC6ukHnZj92q7EdLNlzR3V4wpsbDVPqha6Z0jERPFEV8-UjC01tL9e_JE">
+<span class="absolute top-3 left-3 bg-surface/90 backdrop-blur-sm text-primary px-3 py-1 rounded-full text-xs font-semibold">6 dk okuma</span>
+</div>
+<div class="p-7 flex flex-col flex-1 justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">İlişkiler</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-2 group-hover:text-secondary transition-colors">
+                    İlişkilerde İletişim Engellerini Aşmak
+                  </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-3 leading-relaxed">
+                    Tartışmalarda savunmaya geçmek yerine duyguları ifade etmenin ve partneri gerçekten duymanın yolları.
+                  </p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary mt-6 group-hover:text-secondary transition-colors" href="#blog">
+<span class="">Yazıyı Oku</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span>
+</a>
+</div>
+</article>
+<!-- Post 3 -->
+<article class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group border border-primary/5">
+<div class="w-full h-56 overflow-hidden bg-surface-container relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Warm mother and child moment playing gently with wooden blocks on a soft linen carpet, soft morning daylight, conveying calm emotional security and mindful parenting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtPliJ8OxB7vKw-X2juY1693F4fx4Kqzvr06rgmS2KmBzdlvaoWBW8CfhiSwB5cvwDnIdpnrUYMhjApLL7Xu4fe6idwUG0CCUjWt6GbcqOJgpvVRAb7mIYBiV1Uts9pRN85c5NoeWUxIqvrw3WqTSTU5dm9OQS7F886Zp86DleereOlrmSNJBaUq-DpjoYxhlzkOKonaCS51w4ge4rhrVy1OCP5fO7c-5umJNzS64">
+<span class="absolute top-3 left-3 bg-surface/90 backdrop-blur-sm text-primary px-3 py-1 rounded-full text-xs font-semibold">4 dk okuma</span>
+</div>
+<div class="p-7 flex flex-col flex-1 justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Ebeveynlik</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-2 group-hover:text-secondary transition-colors">
+                    Çocuklarda Duygu Regülasyonu ve Ebeveyn Tutumları
+                  </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-3 leading-relaxed">
+                    Öfke krizlerinde çocuğunuzu sakinleştirmek için kendi sinir sisteminizi nasıl düzenleyebileceğinize dair ipuçları.
+                  </p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary mt-6 group-hover:text-secondary transition-colors" href="#blog">
+<span class="">Yazıyı Oku</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span>
+</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- SECTION 10: SIKÇA SORULAN SORULAR -->
+<section class="w-full py-20 bg-surface-container-low/70">
+<div class="max-w-4xl mx-auto px-6 lg:px-12">
+<div class="text-center mb-14">
+<span class="font-handwriting text-2xl text-secondary font-bold block mb-1">akılda soru işareti kalmasın</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Sıkça Sorulan Sorular</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+              Seans öncesi aklınıza takılabilecek her türlü pratik ve etik detay.
+            </p>
+</div>
+<div class="space-y-4" id="faq-accordion">
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm border border-primary/5 overflow-hidden transition-all">
+<button class="w-full text-left p-6 flex items-center justify-between gap-4 font-headline-sm text-headline-sm text-primary hover:text-secondary transition-colors" onclick="toggleFaq(this)">
+<span class="">Seanslar ne kadar sürer?</span>
+<span class="material-symbols-outlined text-xl transform transition-transform duration-200">expand_more</span>
+</button>
+<div class="px-6 pb-6 text-on-surface-variant font-body-md text-body-md leading-relaxed hidden">
+                Bireysel psikoterapi seansları standart olarak 50 dakika sürmektedir. Çift ve aile görüşmeleri ise ihtiyaca göre 75 ile 90 dakika arasında planlanmaktadır.
+              </div>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm border border-primary/5 overflow-hidden transition-all">
+<button class="w-full text-left p-6 flex items-center justify-between gap-4 font-headline-sm text-headline-sm text-primary hover:text-secondary transition-colors" onclick="toggleFaq(this)">
+<span class="">Terapi sürecinde gizlilik nasıl korunur?</span>
+<span class="material-symbols-outlined text-xl transform transition-transform duration-200">expand_more</span>
+</button>
+<div class="px-6 pb-6 text-on-surface-variant font-body-md text-body-md leading-relaxed hidden">
+                Terapi odasında veya online seansta paylaşılan tüm bilgiler Türk Psikologlar Derneği Etik Yönetmeliği ve KVKK hükümleri gereğince kesinlikle gizlidir. Kişinin kendisine veya bir başkasına hayati zarar verme riski bulunan yasal istisnalar haricinde hiçbir kurum veya şahısla bilgi paylaşılmaz.
+              </div>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm border border-primary/5 overflow-hidden transition-all">
+<button class="w-full text-left p-6 flex items-center justify-between gap-4 font-headline-sm text-headline-sm text-primary hover:text-secondary transition-colors" onclick="toggleFaq(this)">
+<span class="">Online terapi yüz yüze terapi kadar etkili midir?</span>
+<span class="material-symbols-outlined text-xl transform transition-transform duration-200">expand_more</span>
+</button>
+<div class="px-6 pb-6 text-on-surface-variant font-body-md text-body-md leading-relaxed hidden">
+                Uluslararası klinik araştırmalar ve psikoloji literatürü, uygun teknik altyapı ve terapötik bağ sağlandığında online terapinin yüz yüze terapiyle eşdeğer klinik etkiye sahip olduğunu kanıtlamıştır.
+              </div>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm border border-primary/5 overflow-hidden transition-all">
+<button class="w-full text-left p-6 flex items-center justify-between gap-4 font-headline-sm text-headline-sm text-primary hover:text-secondary transition-colors" onclick="toggleFaq(this)">
+<span class="">Çocuğum için nasıl başvurabilirim?</span>
+<span class="material-symbols-outlined text-xl transform transition-transform duration-200">expand_more</span>
+</button>
+<div class="px-6 pb-6 text-on-surface-variant font-body-md text-body-md leading-relaxed hidden">
+                Çocuk ve ergen terapisi süreçlerinde ilk seans çocuk getirilmeden yalnızca anne ve baba (veya birincil bakım verenler) ile gelişim öyküsü alma amaçlı planlanır. Ardından çocukla birebir seanslara geçilir.
+              </div>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm border border-primary/5 overflow-hidden transition-all">
+<button class="w-full text-left p-6 flex items-center justify-between gap-4 font-headline-sm text-headline-sm text-primary hover:text-secondary transition-colors" onclick="toggleFaq(this)">
+<span class="">Ödeme ve randevu iptal kuralları nelerdir?</span>
+<span class="material-symbols-outlined text-xl transform transition-transform duration-200">expand_more</span>
+</button>
+<div class="px-6 pb-6 text-on-surface-variant font-body-md text-body-md leading-relaxed hidden">
+                Planlanan seansın iptali veya ertelenmesi durumunda en az 24 saat öncesinden bilgi verilmesi rica olunur. Son dakika iptallerinde seans saati rezerve tutulduğu için ücret politikası uygulanabilmektedir. Ödemeler nakit veya havale/EFT ile yapılabilir.
+              </div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 11: HIZLI RANDEVU & İLETİŞİM BÖLÜMÜ -->
+<section class="w-full py-20 bg-surface" id="hizli-randevu">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Sol: Randevu Formu -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-8 md:p-12 rounded-3xl shadow-xl border border-primary/10 relative">
+<!-- Cute sticker note on form -->
+<div class="absolute -top-3 right-8 bg-[#fff8db] border border-amber-300 text-amber-900 font-handwriting text-base px-3 py-1 rounded-md transform rotate-3 shadow-xs">
+                İlk adımı güvenle atın ✉
+              </div>
+<div class="mb-8">
+<span class="font-handwriting text-2xl text-secondary font-bold block mb-1">birlikte başlayalım</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Hızlı Randevu Talebi</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  Kısa formu doldurun; uygun saatleri birlikte planlamak için size aynı gün içinde nezaketle dönüş yapalım.
+                </p>
+</div>
+<form class="space-y-6" onsubmit="event.preventDefault(); alert('Randevu talebiniz sevgiyle iletildi. En kısa sürede sizinle iletişime geçeceğiz.');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Ad Soyad</label>
+<input class="w-full px-4 py-3 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/40 focus:outline-none focus:border-primary focus:bg-surface-container-lowest shadow-sm" placeholder="Adınız Soyadınız" required="" type="text">
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Telefon Numarası</label>
+<input class="w-full px-4 py-3 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/40 focus:outline-none focus:border-primary focus:bg-surface-container-lowest shadow-sm" placeholder="05XX XXX XX XX" required="" type="tel">
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Terapi Tercihi</label>
+<select class="w-full px-4 py-3 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/40 focus:outline-none focus:border-primary focus:bg-surface-container-lowest shadow-sm">
+<option value="yuzyuze">Yüz Yüze (Bursa Nilüfer)</option>
+<option value="online">Online Terapi (Görüntülü)</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Destek Konusu</label>
+<select class="w-full px-4 py-3 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/40 focus:outline-none focus:border-primary focus:bg-surface-container-lowest shadow-sm">
+<option>Bireysel Terapi</option>
+<option>Çift ve Evlilik Terapisi</option>
+<option>EMDR Terapisi</option>
+<option>Çocuk ve Ergen Danışmanlığı</option>
+<option>Aile Danışmanlığı</option>
+<option>Diğer</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Düşünceleriniz veya Uygun Saatleriniz (İsteğe bağlı)</label>
+<textarea class="w-full px-4 py-3 rounded-xl bg-surface-container-low text-on-surface border border-outline-variant/40 focus:outline-none focus:border-primary focus:bg-surface-container-lowest shadow-sm" placeholder="Durumunuzu kısaca özetleyebilir veya uygun olduğunuz gün/saat aralıklarını belirtebilirsiniz." rows="4"></textarea>
+</div>
+<div class="flex items-start gap-3">
+<input class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary border-outline-variant" id="kvkk-onay" required="" type="checkbox">
+<label class="font-body-sm text-body-sm text-on-surface-variant" for="kvkk-onay">
+                    KVKK aydınlatma metnini okudum; kişisel verilerimin randevu oluşturma kapsamında işlenmesini onaylıyorum.
+                  </label>
+</div>
+<button class="w-full py-4 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-md hover:shadow-xl transition-all flex items-center justify-center gap-2 group cursor-pointer" type="submit">
+<span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">send</span>
+<span class="">Randevu Talebi Gönder</span>
+</button>
+</form>
+</div>
+<!-- Sağ: Ofis Kartı & Hızlı İletişim -->
+<div class="lg:col-span-5 space-y-6">
+<div class="bg-surface-container-low p-8 rounded-3xl shadow-sm border border-primary/5 space-y-6">
+<h3 class="font-headline-sm text-headline-sm text-primary">Klinik &amp; İletişim Bilgileri</h3>
+<div class="space-y-5">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-xl bg-surface-container text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">location_on</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg text-primary block">Klinik Adresi</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-relaxed">
+                        FSM Bulvarı, Fethiye Mah. Sanayi Cad. No: 324<br>Nilüfer / BURSA
+                      </p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-xl bg-surface-container text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">schedule</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg text-primary block">Çalışma Saatleri</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                        Pazartesi – Cumartesi: 09:30 – 19:30<br>Pazar: Kapalı (Yalnızca acil durumlar)
+                      </p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-xl bg-surface-container text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">call</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg text-primary block">Doğrudan İletişim</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                        +90 (555) 000 00 00
+                      </p>
+</div>
+</div>
+</div>
+<div class="pt-4 flex flex-col sm:flex-row gap-3">
+<a class="flex-1 py-3 px-4 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-label-lg text-label-lg text-center flex items-center justify-center gap-2 transition-all hover:scale-105" href="tel:+905550000000">
+<span class="material-symbols-outlined text-base">call</span>
+<span class="">Hemen Ara</span>
+</a>
+<a class="flex-1 py-3 px-4 rounded-xl bg-secondary hover:bg-secondary-container hover:text-on-secondary-container text-on-secondary font-label-lg text-label-lg text-center flex items-center justify-center gap-2 transition-all hover:scale-105" href="https://wa.me/905550000000" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-base">chat</span>
+<span class="">WhatsApp</span>
+</a>
+</div>
+</div>
+<!-- Mini Map Panel with Soft Rounded Border -->
+<div class="w-full h-56 rounded-3xl bg-cover bg-center shadow-sm border border-primary/10 overflow-hidden" data-location="Fethiye Mah. Nilüfer Bursa" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5DeZeVZY-vD5xcZfyZu3NkfHGlc0UqVFSh3Ot8BH9py8CjBZ5fnhTy_vS-oWhCKqozMYSBbIn-aofxe8UchUJZZkTd_27Q1dFLEjpmY9A2OPr6QTkFeaRBXaQcctY3DCQ6qDldQtDkm5t6B7VHj_5pisi7FXrQ1DOzJBRhPaSjdXo1BaZMLKG4hNaG8YGdwTAGwnxhTOk3WmnlU3D8O7rElKzREU8ww4CJR7bEQY')"></div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- ASIDE: FLOATING WHATSAPP BUTTON (Gentle wobble animation every few seconds) -->
+
+<!-- MOBILE BOTTOM BAR -->
+<nav aria-label="Mobil Hızlı Erişim Çubuğu" class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-lg px-4 py-3 shadow-[0_-8px_24px_rgba(43,76,65,0.08)] flex items-center justify-between gap-3 border-t border-primary/5">
+<a class="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-surface-container text-primary font-label-lg text-label-lg hover:bg-surface-container-high transition-colors" href="tel:+905550000000">
+<span class="material-symbols-outlined text-lg">call</span>
+<span class="">Hemen Ara</span>
+</a>
+<a class="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-secondary hover:bg-secondary-container hover:text-on-secondary-container text-on-secondary font-label-lg text-label-lg transition-colors shadow-sm" data-path="randevu-al" href="#hizli-randevu">
+<span class="material-symbols-outlined text-lg">event_available</span>
+<span class="">Randevu Al</span>
+</a>
+</nav>
+<!-- FOOTER -->
+<!-- ASIDE: FLOATING WHATSAPP BUTTON -->
+<aside aria-label="HÄ±zlÄ± Ä°letiÅŸim KanallarÄ±" class="fixed bottom-24 right-5 md:bottom-8 md:right-8 z-40">
+<a class="group flex items-center gap-3 bg-surface-container-lowest text-primary px-4 py-3 rounded-full shadow-[0_12px_32px_-6px_rgba(43,76,65,0.22)] hover:shadow-[0_16px_36px_-6px_rgba(43,76,65,0.3)] hover:bg-primary hover:text-on-primary transition-all duration-300 ring-2 ring-primary/10" href="https://wa.me/905550000000?text=Merhaba,%20terapi%20seanslar%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." rel="noopener noreferrer" target="_blank">
+<span class="flex h-3 w-3 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-fixed opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+</span>
+<span class="material-symbols-outlined text-2xl text-secondary group-hover:text-on-primary transition-colors animate-wiggle-periodic">chat</span>
+<span class="hidden sm:inline font-label-lg text-label-lg font-medium">WhatsApp ile DanÄ±ÅŸÄ±n</span>
+</a>
+</aside>
+
+<!-- MOBILE BOTTOM BAR -->
+<nav aria-label="Mobil HÄ±zlÄ± EriÅŸim Ã‡ubuÄŸu" class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest/95 backdrop-blur-lg px-4 py-3 shadow-[0_-8px_24px_rgba(43,76,65,0.08)] flex items-center justify-between gap-3 border-t border-primary/5">
+<a class="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-surface-container text-primary font-label-lg text-label-lg hover:bg-surface-container-high transition-colors" href="tel:+905550000000">
+<span class="material-symbols-outlined text-lg">call</span>
+<span>Hemen Ara</span>
+</a>
+<a class="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-secondary hover:bg-secondary-container hover:text-on-secondary-container text-on-secondary font-label-lg text-label-lg transition-colors shadow-sm" href="#hizli-randevu">
+<span class="material-symbols-outlined text-lg">event_available</span>
+<span>Randevu Al</span>
+</a>
+</nav>
+<!-- FOOTER -->
+<footer class="w-full bg-surface-container-low text-on-surface pt-16 pb-28 md:pb-12 mt-16 border-t border-outline-variant/30">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12">
+<div class="lg:col-span-4 flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<img alt="Uzm. Psk. Tuba GÃ¼ngÃ¶r Aslan Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W_HITE7k8lXkDVAoFvhdly9NdykpswmiAAhX8jB7vLGJmwDT7Fqj3zmnZmC-h-pnkq8c2CuQtYzBl9ELh6QNFVZxTz5WtQS0HzZe2JLvbHuoTuV-EVFl83M2Oe8_eOzsEsdulNnpiocohvhTDrYZsEf7HaoVLluZXJXb0wHbKTHWGibY7VRqY8Ds2BPKuFcJvTuoz7fEAN1uGvUySM7gKFkbLknPYDJyVMX0MFHDst">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">Tuba GÃ¼ngÃ¶r Aslan</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+            Klinik psikoloji uzmanlÄ±ÄŸÄ± ve etik ilkeler doÄŸrultusunda, bireysel terapi ve danÄ±ÅŸmanlÄ±k sÃ¼reÃ§lerinde gÃ¼venli, ÅŸefkatli ve bilimsel bir rehberlik alanÄ± sunuyorum.
+          </p>
+<div class="flex items-center gap-3 pt-2">
+<a aria-label="Konum DetayÄ±" class="w-9 h-9 rounded-full bg-surface flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors shadow-sm" href="https://maps.google.com/?q=Bahar+Sitesi+FSM+Bulvari+Nilufer+Bursa" target="_blank" rel="noopener noreferrer">
+<span class="material-symbols-outlined text-lg">location_on</span>
+</a>
+<a aria-label="E-posta GÃ¶nder" class="w-9 h-9 rounded-full bg-surface flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors shadow-sm" href="mailto:info@skytryazilim.com">
+<span class="material-symbols-outlined text-lg">mail</span>
+</a>
+<a aria-label="Instagram HesabÄ±" class="w-9 h-9 rounded-full bg-surface flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors shadow-sm" href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-3 flex flex-col gap-3">
+<span class="font-label-lg text-label-lg text-primary uppercase tracking-wider font-semibold">HÄ±zlÄ± MenÃ¼</span>
+<div class="flex flex-col gap-2">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="index.html">Ana Sayfa</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="hakkimda.html">HakkÄ±mda</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="calisma-alanlari.html">Ã‡alÄ±ÅŸma AlanlarÄ±</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#blog">Blog &amp; YazÄ±lar</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="iletisim.html">Ä°letiÅŸim</a>
+</div>
+</div>
+<div class="lg:col-span-2 flex flex-col gap-3">
+<span class="font-label-lg text-label-lg text-primary uppercase tracking-wider font-semibold">Seans TÃ¼rleri</span>
+<div class="flex flex-col gap-2.5">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+<span class="font-body-sm text-body-sm">YÃ¼z YÃ¼ze Terapi</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+<span class="font-body-sm text-body-sm">Online Terapi</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+<span class="font-body-sm text-body-sm">Bireysel DanÄ±ÅŸmanlÄ±k</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+<span class="font-body-sm text-body-sm">EMDR Terapisi</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-3 flex flex-col gap-3">
+<span class="font-label-lg text-label-lg text-primary uppercase tracking-wider font-semibold">Klinik &amp; Lokasyon</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            FSM BulvarÄ± Bahar Sitesi D Blok K:3 D:5<br>NilÃ¼fer / Bursa<br>Randevu ile hizmet verilmektedir.
+          </p>
+<div class="pt-1">
+<a class="font-label-lg text-label-lg text-primary hover:text-primary-container transition-colors flex items-center gap-2" href="tel:+905550000000">
+<span class="material-symbols-outlined text-base">call</span>
+<span>+90 (555) 000 00 00</span>
+</a>
+</div>
+</div>
+</div>
+<div class="pt-8 mt-2 flex flex-col md:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-on-surface-variant border-t border-outline-variant/30">
+<p>Â© 2026 Uzm. Psk. Tuba GÃ¼ngÃ¶r Aslan. TÃ¼m haklarÄ± saklÄ±dÄ±r.</p>
+<div class="flex flex-wrap items-center gap-4 md:gap-6">
+<a class="hover:text-primary transition-colors cursor-pointer" onclick="openLegalModal('kvkk')">KVKK AydÄ±nlatma Metni</a>
+<a class="hover:text-primary transition-colors cursor-pointer" onclick="openLegalModal('gizlilik')">Gizlilik PolitikasÄ±</a>
+<a class="hover:text-primary transition-colors cursor-pointer" onclick="openLegalModal('cerez')">Ã‡erez PolitikasÄ±</a>
+</div>
+</div>
+<div class="mt-8 p-4 rounded-2xl bg-surface text-center border border-primary/5">
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+          Bu sitedeki iÃ§erikler genel bilgilendirme amaÃ§lÄ±dÄ±r; tÄ±bbi tanÄ± ve tedavi yerine geÃ§mez.
+        </p>
+</div>
+</div>
+</footer>
+<!-- JAVASCRIPT: Accordion + Animated Counters + Interaction -->
+<script>
+    // FAQ Accordion
+    function toggleFaq(button) {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('.material-symbols-outlined');
+      const isHidden = content.classList.contains('hidden');
+      
+      document.querySelectorAll('#faq-accordion > div').forEach(item => {
+        const text = item.querySelector('div.text-on-surface-variant');
+        const ic = item.querySelector('.material-symbols-outlined');
+        if (text && !text.classList.contains('hidden')) {
+          text.classList.add('hidden');
+          if (ic) ic.classList.remove('rotate-180');
+        }
+      });
+
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      } else {
+        content.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+      }
+    }
+
+    // Number Counter Animation with IntersectionObserver
+    document.addEventListener("DOMContentLoaded", () => {
+      const counters = document.querySelectorAll(".counter-number");
+      let started = false;
+
+      const runCounter = (el) => {
+        const target = +el.getAttribute("data-target");
+        const speed = 25; 
+        let count = 0;
+        const inc = Math.ceil(target / speed) || 1;
+
+        const timer = setInterval(() => {
+          count += inc;
+          if (count >= target) {
+            el.innerText = target;
+            clearInterval(timer);
+          } else {
+            el.innerText = count;
+          }
+        }, 40);
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !started) {
+            started = true;
+            counters.forEach(c => runCounter(c));
+          }
+        });
+      }, { threshold: 0.3 });
+
+      const counterSection = document.getElementById("stat-counters");
+      if (counterSection) {
+        observer.observe(counterSection);
+      }
+    });
+  </script>
+
+
+<!-- LEGAL MODAL -->
+<div id="legal-modal" class="fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+  <div class="bg-[#fbf9f5] rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-hidden shadow-2xl border border-[#2b4c41]/10 flex flex-col">
+    <div class="p-6 md:p-8 border-b border-[#efeeea] flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="w-10 h-10 rounded-full bg-[#c6ebdb] text-[#002118] flex items-center justify-center">
+          <span class="material-symbols-outlined text-xl">gavel</span>
+        </span>
+        <h3 id="legal-modal-title" class="font-['Playfair_Display'] text-2xl font-bold text-[#2b4c41]">AydÄ±nlatma Metni</h3>
+      </div>
+      <button onclick="closeLegalModal()" class="w-10 h-10 rounded-full bg-[#efeeea] hover:bg-[#eae8e4] text-[#2b4c41] flex items-center justify-center transition-colors">
+        <span class="material-symbols-outlined text-xl">close</span>
+      </button>
+    </div>
+    <div id="legal-modal-body" class="p-6 md:p-8 overflow-y-auto font-['Plus_Jakarta_Sans'] text-[#414845] text-sm md:text-base leading-relaxed space-y-4">
+      <!-- Injected via JavaScript -->
+    </div>
+    <div class="p-5 border-t border-[#efeeea] bg-[#f5f3ef] flex justify-end">
+      <button onclick="closeLegalModal()" class="px-6 py-2.5 rounded-full bg-[#2b4c41] hover:bg-[#436458] text-white font-semibold text-sm transition-all shadow-md">
+        AnladÄ±m ve Kapat
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleMobileNav() {
+    const menu = document.getElementById('mobile-dropdown');
+    const icon = document.getElementById('menu-icon');
+    if (!menu) return;
+    if (menu.classList.contains('hidden')) {
+      menu.classList.remove('hidden');
+      if (icon) icon.innerText = 'close';
+    } else {
+      menu.classList.add('hidden');
+      if (icon) icon.innerText = 'menu';
+    }
+  }
+
+  function openLegalModal(type) {
+    const modal = document.getElementById('legal-modal');
+    const title = document.getElementById('legal-modal-title');
+    const body = document.getElementById('legal-modal-body');
+    if (!modal || !title || !body) return;
+
+    if (type === 'kvkk') {
+      title.innerText = 'KVKK AydÄ±nlatma Metni';
+      body.innerHTML = 
+        <p><strong>6698 SAYILI KÄ°ÅÄ°SEL VERÄ°LERÄ°N KORUNMASI KANUNU (KVKK) AYDINLATMA METNÄ°</strong></p>
+        <p>Uzm. Psk. Tuba GÃ¼ngÃ¶r Aslan olarak, danÄ±ÅŸanlarÄ±mÄ±zÄ±n ve web sitemizi ziyaret eden bireylerin kiÅŸisel verilerinin korunmasÄ±na bÃ¼yÃ¼k Ã¶nem vermekteyiz.</p>
+        <p><strong>1. Veri Sorumlusu:</strong> Uzm. Psk. Tuba GÃ¼ngÃ¶r Aslan (Bursa NilÃ¼fer).</p>
+        <p><strong>2. Ä°ÅŸlenen KiÅŸisel Veriler:</strong> Ä°sim, soyisim, telefon numarasÄ±, e-posta adresi ve randevu talebinize iliÅŸkin seans tÃ¼rÃ¼ tercihleri.</p>
+        <p><strong>3. Verilerin Ä°ÅŸlenme AmacÄ±:</strong> Randevu takviminin oluÅŸturulmasÄ±, tarafÄ±nÄ±za bilgilendirme yapÄ±lmasÄ± ve terapi sÃ¼reÃ§lerinin yÃ¼rÃ¼tÃ¼lmesi amaÃ§larÄ±yla sÄ±nÄ±rlÄ±dÄ±r.</p>
+        <p><strong>4. Gizlilik ve AktarÄ±m:</strong> DanÄ±ÅŸan mahremiyeti ve kiÅŸisel veriler, TÃ¼rk Psikologlar DerneÄŸi Etik YÃ¶netmeliÄŸi ve ilgili kanunlar gereÄŸince korunur; hiÃ§bir koÅŸulda Ã¼Ã§Ã¼ncÃ¼ taraflara ticari amaÃ§la aktarÄ±lmaz.</p>
+      ;
+    } else if (type === 'gizlilik') {
+      title.innerText = 'Gizlilik PolitikasÄ±';
+      body.innerHTML = 
+        <p><strong>GÄ°ZLÄ°LÄ°K POLÄ°TÄ°KASI</strong></p>
+        <p>DanÄ±ÅŸanlarÄ±mÄ±zÄ±n gÃ¼venliÄŸi ve mahremiyeti mesleki ilkelerimizin temelini oluÅŸturur.</p>
+        <p><strong>Klinik Mahremiyet:</strong> Terapi seanslarÄ±nda paylaÅŸÄ±lan tÃ¼m detaylar mesleki sÄ±r olup kanuni zorunluluk halleri haricinde kesinlikle gizli tutulur.</p>
+        <p><strong>Ä°letiÅŸim GÃ¼venliÄŸi:</strong> Web sitemiz Ã¼zerinden yapÄ±lan tÃ¼m iletiÅŸimler SSL gÃ¼venlik protokolÃ¼ ile korunmaktadÄ±r.</p>
+      ;
+    } else if (type === 'cerez') {
+      title.innerText = 'Ã‡erez (Cookie) PolitikasÄ±';
+      body.innerHTML = 
+        <p><strong>Ã‡EREZ POLÄ°TÄ°KASI</strong></p>
+        <p>Sitemiz, kullanÄ±cÄ± deneyimini optimize etmek ve teknik performansÄ± saÄŸlamak amacÄ±yla yalnÄ±zca temel Ã§erezleri kullanÄ±r.</p>
+        <p>TarayÄ±cÄ±nÄ±zÄ±n ayarlarÄ±ndan Ã§erez tercihlerinizi dilediÄŸiniz zaman deÄŸiÅŸtirebilirsiniz.</p>
+      ;
+    }
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLegalModal() {
+    const modal = document.getElementById('legal-modal');
+    if (!modal) return;
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = '';
+  }
+
+  window.addEventListener('click', function(e) {
+    const modal = document.getElementById('legal-modal');
+    if (e.target === modal) {
+      closeLegalModal();
+    }
+  });
+</script>
+</body></html>
